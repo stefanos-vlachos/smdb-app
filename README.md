@@ -1,7 +1,7 @@
 # smdb-app
 
-## Team Members __
-Dimitrios Kalpyris __
-Konstantinos Moulosiotis __
-Rositsa Koleva __
+## Team Members <br/>
+Dimitrios Kalpyris <br/>
+Konstantinos Moulosiotis <br/>
+Rositsa Koleva <br/>
 Stefanos Vlachos
