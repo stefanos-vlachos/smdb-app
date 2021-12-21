@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.pfseven</groupId>
+	<artifactId>smdb-app</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>smdb</name>
+	<description>Second project for PF7</description>
+
+	<properties>
+		<java.version>11</java.version>
+		<!-- Desired Maven version -->
+		<maven.version>3.6</maven.version>
+		<!-- Build JDK -->
+		<java.version>11</java.version>
+		<!-- Maven source encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- Library versions-->
+		<!--
+			Bump version due to https://spring.io/blog/2021/12/10/log4j2-vulnerability-and-spring-boot
+			https://unit42.paloaltonetworks.com/apache-log4j-vulnerability-cve-2021-44228/
+		-->
+		<log4j2.version>2.16.0</log4j2.version>
+		<disruptor-maven-plugin.version>3.4.4</disruptor-maven-plugin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!--
+				Asynchronous Logging @see https://logging.apache.org/log4j/2.x/manual/async.html
+				Hint:
+				Don't forget to set system property
+				-Dlog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector
+				 to make all loggers asynchronous
+				-->
+			<dependency>
+				<groupId>com.lmax</groupId>
+				<artifactId>disruptor</artifactId>
+				<version>${disruptor-maven-plugin.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+        <!-- Dependency required for FreeMarker to properly work -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+		<!-- FreeMarker dependency -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
