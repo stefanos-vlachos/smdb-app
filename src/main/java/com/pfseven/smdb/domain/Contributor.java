@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -16,9 +18,9 @@ import javax.validation.constraints.NotNull;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 
-@Entity
+/*@Entity
 @Table(name="CONTRIBUTORS")
-@SequenceGenerator(name="idGenerator", sequenceName = "CONTRIBUTORS_SEQ", initialValue = 1, allocationSize = 1)
+@SequenceGenerator(name="idGenerator", sequenceName = "CONTRIBUTORS_SEQ", initialValue = 1, allocationSize = 1)*/
 public class Contributor extends BaseModel{
 
     @NotNull(message = "{fullName.null}")
@@ -32,4 +34,5 @@ public class Contributor extends BaseModel{
     @NotNull(message = "{origin.null}")
     @Column(length=20, nullable = false)
     private String origin;
+
 }

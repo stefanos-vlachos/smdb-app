@@ -16,7 +16,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass
-
 public class BaseModel implements Serializable {
     private static final Long serialVersionUID = 1L;
     @Id

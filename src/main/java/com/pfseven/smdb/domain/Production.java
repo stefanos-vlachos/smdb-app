@@ -3,9 +3,7 @@ package com.pfseven.smdb.domain;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.Entity;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Data
@@ -17,10 +15,10 @@ import java.util.List;
 public class Production extends BaseModel{
     private String title;
     private Integer releaseYear;
-    private float rating;
+    private BigDecimal rating;
     private String language;
     private List<Genre> genres;
     private String resume;
-    private ProductionCrew productionCrew;
-    private Cast cast;
+    private List<Contribution> contributions;
 }
+
