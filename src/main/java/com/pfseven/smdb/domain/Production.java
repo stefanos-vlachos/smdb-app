@@ -16,6 +16,7 @@ import java.util.Set;
 @SuperBuilder
 @Entity()
 @Table(name="PRODUCTIONS")
+@Inheritance(strategy = InheritanceType.JOINED)
 @SequenceGenerator(name="idGenerator", sequenceName = "PRODUCTIONS_SEQ",initialValue = 1, allocationSize = 1)
 
 public class Production extends BaseModel{
