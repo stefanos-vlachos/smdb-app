@@ -1,23 +1,24 @@
 package com.pfseven.smdb.domain;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@SuperBuilder
+
 @Entity()
 @Table(name="PRODUCTIONS")
+@SequenceGenerator(name="productionIdGenerator", sequenceName = "PRODUCTIONS_SEQ",initialValue = 1, allocationSize = 1)
 @Inheritance(strategy = InheritanceType.JOINED)
-@SequenceGenerator(name="idGenerator", sequenceName = "PRODUCTIONS_SEQ",initialValue = 1, allocationSize = 1)
 
 public class Production extends BaseModel{
 
@@ -25,9 +26,10 @@ public class Production extends BaseModel{
     @Column(length = 30, nullable = false)
     private String title;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @NotNull(message = "{releaseYear.null}")
     @Column(nullable = false)
-    private Integer releaseYear;
+    private Date releaseYear;
 
     @NotNull(message = "{rating.null}")
     @Column(precision = 4, nullable = false)
@@ -43,10 +45,7 @@ public class Production extends BaseModel{
     @Column(length = 100, nullable = false)
     private String resume;
 
-    @JsonManagedReference("prodContributions")
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "production", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private Set<Contribution> prodContributions;
+    @OneToMany(mappedBy = "production")
+    private Set<ContributorProduction> contentAuthors = new HashSet<>();
 }
 

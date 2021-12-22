@@ -10,15 +10,13 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Data
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@SuperBuilder
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
 
 @Entity()
 @Table(name="MOVIES")
-@SequenceGenerator(name="idGenerator", sequenceName = "MOVIES_SEQ",initialValue = 1, allocationSize = 1)
+@SequenceGenerator(name="movieIdGenerator", sequenceName = "MOVIES_SEQ",initialValue = 1, allocationSize = 1)
 public class Movie extends Production{
 
     @NotNull(message = "{duration.null}")

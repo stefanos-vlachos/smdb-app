@@ -1,20 +1,17 @@
 package com.pfseven.smdb.domain;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@SuperBuilder
-@ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = true)
-
 @Entity()
 @Table(name="CONTRIBUTORS")
 @SequenceGenerator(name="idGenerator", sequenceName = "CONTRIBUTORS_SEQ",initialValue = 1, allocationSize = 1)
@@ -32,10 +29,7 @@ public class Contributor extends BaseModel{
     @Column(length = 20, nullable = false)
     private String origin;
 
-    @JsonManagedReference("contributions")
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy="contributor", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private Set<Contribution> contributions;
+    @OneToMany(mappedBy = "contributor")
+    private Set<ContributorProduction> contributorProductions = new HashSet<>();
 
 }

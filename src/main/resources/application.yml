@@ -1,6 +1,6 @@
 spring:
   application:
-    name: SMDB app
+    name: PF SMDB app
   data:
     jpa:
       repositories:
@@ -33,7 +33,7 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       use-new-id-generator-mappings: true
@@ -61,5 +61,3 @@ spring:
       # .sql) and DML (data.sql) scripts.
       mode: EMBEDDED
       platform: h2
-  cache:
-    cache-names: catalog
