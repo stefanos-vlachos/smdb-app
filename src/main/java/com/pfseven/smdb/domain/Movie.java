@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Data
@@ -16,11 +17,12 @@ import javax.validation.constraints.NotNull;
 
 @Entity()
 @Table(name="MOVIES")
-@SequenceGenerator(name="movieIdGenerator", sequenceName = "MOVIES_SEQ",initialValue = 1, allocationSize = 1)
+@SequenceGenerator(name="idGenerator", sequenceName = "MOVIES_SEQ",initialValue = 1, allocationSize = 1)
 public class Movie extends Production{
 
     @NotNull(message = "{duration.null}")
     @Column(nullable = false)
+    @Min(value = 1)
     private Integer duration;
 
 }

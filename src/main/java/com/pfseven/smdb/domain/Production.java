@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -17,13 +18,13 @@ import java.util.Set;
 
 @Entity()
 @Table(name="PRODUCTIONS")
-@SequenceGenerator(name="productionIdGenerator", sequenceName = "PRODUCTIONS_SEQ",initialValue = 1, allocationSize = 1)
+@SequenceGenerator(name="idGenerator", sequenceName = "PRODUCTIONS_SEQ",initialValue = 1, allocationSize = 1)
 @Inheritance(strategy = InheritanceType.JOINED)
 
 public class Production extends BaseModel{
 
     @NotNull(message = "{title.null}")
-    @Column(length = 30, nullable = false)
+    @Column(nullable = false)
     private String title;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -33,19 +34,23 @@ public class Production extends BaseModel{
 
     @NotNull(message = "{rating.null}")
     @Column(precision = 4, nullable = false)
+    @Max(value = 10)
     private BigDecimal rating;
 
     @NotNull(message = "{language.null}")
     @Column(length = 20, nullable = false)
     private String language;
 
-    //private List<Genre> genres;
+    @Enumerated(EnumType.STRING)
+    @ElementCollection(targetClass = Genre.class)
+    @CollectionTable(name = "PRODUCTION_GENRES")
+    private Set<Genre> genres;
 
     @NotNull(message = "{resume.null}")
-    @Column(length = 100, nullable = false)
+    @Column(length = 2048, nullable = false)
     private String resume;
 
     @OneToMany(mappedBy = "production")
-    private Set<ContributorProduction> contentAuthors = new HashSet<>();
+    private Set<ContributorProduction> contributorProductions = new HashSet<>();
 }
 

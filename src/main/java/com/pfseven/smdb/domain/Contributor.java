@@ -18,12 +18,12 @@ import java.util.Set;
 public class Contributor extends BaseModel{
 
     @NotNull(message = "{fullName.null}")
-    @Column(length = 30, nullable = false)
+    @Column(length = 50, nullable = false)
     private String fullName;
 
     @NotNull(message = "{gender.null}")
-    @Column(length = 1, nullable = false)
-    private char gender;
+    @Column(length = 6, nullable = false)
+    private String gender;
 
     @NotNull(message = "{origin.null}")
     @Column(length = 20, nullable = false)
