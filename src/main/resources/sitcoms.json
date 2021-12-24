@@ -1,0 +1,1606 @@
+{
+  "sitcoms": [
+    {
+      "title": "Rick and Morty",
+      "releaseYear": "2013",
+      "seasons": "6",
+      "episodes": "52",
+      "rating": "9.2",
+      "language": "English",
+      "genres": ["Animation", "Adventure", "Comedy"],
+      "resume": "An animated series that follows the exploits of a super scientist and his not-so-bright grandson.",
+      "productionCrew": [
+        {
+          "fullName": "Wesley Archer",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Pete Michels",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Nathan Litz",
+          "gender": "Male",
+          "origin": "Canada",
+          "role": "Director"
+        },
+        {
+          "fullName": "Dan Harmon",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Justin Roiland",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Keith Crofford",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Dan Harmon",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Justin Roiland",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Ryan Elder",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Justin Roiland",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Chris Parnell",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Spencer Grammer",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Sarah Chalke",
+          "gender": "Female",
+          "origin": "Canada",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Friends",
+      "releaseYear": "1994",
+      "seasons": "10",
+      "episodes": "235",
+      "rating": "8.8",
+      "language": "English",
+      "genres": ["Comedy", "Romance"],
+      "resume": "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.",
+      "productionCrew": [
+        {
+          "fullName": "Gary Halvorson",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Kevin Bright",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Michael Lembeck",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "David Crane",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Marta Kauffman",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Kevin Bright",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "David Crane",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Marta Kauffman",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Michael Skloff",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Jennifer Aniston",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Courteney Cox",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Lisa Kudrow",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Matt LeBlanc",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "The Office",
+      "releaseYear": "2005",
+      "seasons": "9",
+      "episodes": "188",
+      "rating": "8.9",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.",
+      "productionCrew": [
+        {
+          "fullName": "Paul Feig",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Randall Einhorn",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Ken Kwapis",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Greg Daniels",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Ricky Gervais",
+          "gender": "Male",
+          "origin": "UK",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Stephen Merchant",
+          "gender": "Male",
+          "origin": "UK",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Greg Daniels",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Ricky Gervais",
+          "gender": "Male",
+          "origin": "UK",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Stephen Merchant",
+          "gender": "Male",
+          "origin": "UK",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jay Ferguson",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Kerri Drootin",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Steve Carell",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Jenna Fischer",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "John Krasinski",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Leslie David Baker",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Gravity Falls",
+      "releaseYear": "2012",
+      "seasons": "2",
+      "episodes": "40",
+      "rating": "8.9",
+      "language": "English",
+      "genres": ["Animation", "Action", "Adventure"],
+      "resume": "Twin siblings Dipper and Mabel Pines spend the summer at their great-uncle's tourist trap in the enigmatic Gravity Falls, Oregon.",
+      "productionCrew": [
+        {
+          "fullName": "Joe Pitt",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "John Aoshima",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Alex Hirsch",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Alex Hirsch",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Rob Renzetti",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Brad Breeck",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Jason Ritter",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Alex Hirsch",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Kristen Schaal",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Linda Cardellini",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "It's Always Sunny in Philadelphia",
+      "releaseYear": "2005",
+      "seasons": "18",
+      "episodes": "164",
+      "rating": "8.8",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "Five friends with big egos and small brains are the proprietors of an Irish pub in Philadelphia.",
+      "productionCrew": [
+        {
+          "fullName": "Matt Shakman",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Glenn Howerton",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Rob McElhenney",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Charlie Day",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Nick Frenkel",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jeff Luini",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Cormac Bluestone",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Charlie Day",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Glenn Howerton",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Rob McElhenney",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Kaitlin Olson",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Freaks And Geeks",
+      "releaseYear": "1999",
+      "seasons": "1",
+      "episodes": "18",
+      "rating": "8.7",
+      "language": "English",
+      "genres": ["Comedy", "Drama"],
+      "resume": "A high school mathlete starts hanging out with a group of burnouts while her younger brother navigates his freshman year.",
+      "productionCrew": [
+        {
+          "fullName": "Jake Kasdan",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Judd Apatow",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Paul Feig",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Judd Apatow",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Judd Apatow",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Paul Feig",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Michael Andrews",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Linda Cardellini",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "John Francis Daley",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "James Franco",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Samm Levine",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Seinfeld",
+      "releaseYear": "1989",
+      "seasons": "9",
+      "episodes": "172",
+      "rating": "8.8",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "The continuing misadventures of neurotic New York City stand-up comedian Jerry Seinfeld and his equally neurotic New York City friends.",
+      "productionCrew": [
+        {
+          "fullName": "Andy Ackerman",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Tom Cherones",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Larry David",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Jerry Seinfeld",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "George Shapiro",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Howard West",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Tim Kaiser",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jonathan Wolff",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Jerry Seinfeld",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Jason Alexander",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Michael Richards",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Julia Louis-Dreyfus",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "South Park",
+      "releaseYear": "1997",
+      "seasons": "24",
+      "episodes": "312",
+      "rating": "8.7",
+      "language": "English",
+      "genres": ["Comedy", "Animation"],
+      "resume": "Follows the misadventures of four irreverent grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.",
+      "productionCrew": [
+        {
+          "fullName": "Trey Parker",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Trey Parker",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Matt Stone",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Brian Graden",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Trey Parker",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Matt Stone",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Anne Garefino",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jamie Dunlap",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Scott Nickoley",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Trey Parker",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Matt Stone",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Mona Marshall",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "April Stewart",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Arrested Development",
+      "releaseYear": "2003",
+      "seasons": "5",
+      "episodes": "84",
+      "rating": "8.7",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "Level-headed son Michael Bluth takes over family affairs after his father is imprisoned. But the rest of his spoiled, dysfunctional family are making his job unbearable.",
+      "productionCrew": [
+        {
+          "fullName": "Troy Miller",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Mitchell Hurwitz",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Mitchell Hurwitz",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Nick Runyeard",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Mitchell Hurwitz",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Brian Grazer",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Ron Howard",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "David Schwartz",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Jason Bateman",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Portia de Rossi",
+          "gender": "Female",
+          "origin": "Australia",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Will Arnett",
+          "gender": "Actor",
+          "origin": "Canada",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Michael Cera",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Bojack Horseman",
+      "releaseYear": "2014",
+      "seasons": "6",
+      "episodes": "77",
+      "rating": "8.7",
+      "language": "English",
+      "genres": ["Comedy", "Animation", "Drama"],
+      "resume": "BoJack Horseman was the star of the hit television show \"Horsin' Around\" in the '80s and '90s, but now he's washed up, living in Hollywood, complaining about everything, and wearing colorful sweaters.",
+      "productionCrew": [
+        {
+          "fullName": "Amy Winfrey",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Raphael Bob-Waksberg",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Will Arnett",
+          "gender": "Male",
+          "origin": "Canada",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Raphael Bob-Waksberg",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Will Arnett",
+          "gender": "Male",
+          "origin": "Canada",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Amy Sedaris",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Alison Brie",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Aaron Paul",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Curb Your Enthusiasm",
+      "releaseYear": "2000",
+      "seasons": "11",
+      "episodes": "110",
+      "rating": "8.7",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "The life and times of Larry David and the predicaments he gets himself into with his friends and complete strangers.",
+      "productionCrew": [
+        {
+          "fullName": "Robert B. Weide",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Jeff Schaffer",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Larry David",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Larry David",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jeff Garlin",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jeff Schaffer",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Aaron Kaplan",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Larry David",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Jeff Garlin",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Cheryl Hines",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Susie Essman",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "The Marvelous Mrs. Maisel",
+      "releaseYear": "2017",
+      "seasons": "4",
+      "episodes": "33",
+      "rating": "8.7",
+      "language": "English",
+      "genres": ["Comedy", "Drama"],
+      "resume": "A housewife in 1958 decides to become a stand-up comic.",
+      "productionCrew": [
+        {
+          "fullName": "Amy Sherman-Palladino",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Daniel Palladino",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Amy Sherman-Palladino",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Daniel Palladino",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Amy Sherman-Palladino",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jeff Garlin",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jeff Schaffer",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Eric Gorfain",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Sam Phillips",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Rachel Brosnahan",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Alex Borstein",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Michael Zegen",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Marin Hinkle",
+          "gender": "Female",
+          "origin": "Tanzania",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "The Simpsons",
+      "releaseYear": "1989",
+      "seasons": "33",
+      "episodes": "731",
+      "rating": "8.6",
+      "language": "English",
+      "genres": ["Comedy", "Animation"],
+      "resume": "The satiric adventures of a working-class family in the misfit city of Springfield.",
+      "productionCrew": [
+        {
+          "fullName": "Mike B. Anderson",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "James L. Brooks",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Matt Groening",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Sam Simon",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "James L. Brooks",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Matt Groening",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Sam Simon",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Alf Clausen",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Dan Castellaneta",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Nancy Cartwright",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Harry Shearer",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Julie Kavner",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Parks And Recreation",
+      "releaseYear": "2009",
+      "seasons": "7",
+      "episodes": "124",
+      "rating": "8.6",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "The absurd antics of an Indiana town's public officials as they pursue sundry projects to make their city a better place.",
+      "productionCrew": [
+        {
+          "fullName": "Dean Holland",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Greg Daniels",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Michael Schur",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Greg Daniels",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Howard Klein",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Morgan Sackett",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Mark Rivers",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Amy Poehler",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Nick Offerman",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Aubrey Plaza",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Jim O'Heir",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Community",
+      "releaseYear": "2009",
+      "seasons": "6",
+      "episodes": "110",
+      "rating": "8.5",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "A suspended lawyer is forced to enroll in a community college with an eccentric staff and student body.",
+      "productionCrew": [
+        {
+          "fullName": "Tristram Shapeero",
+          "gender": "Male",
+          "origin": "UK",
+          "role": "Director"
+        },
+        {
+          "fullName": "Joe Russo",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Dan Harmon",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Jake Aust",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Dan Harmon",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Patrick Kienlen",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Ludwig Goransson",
+          "gender": "Male",
+          "origin": "Sweden",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Joel McHale",
+          "gender": "Male",
+          "origin": "Italy",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Gillian Jacobs",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Danny Pudi",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Alison Brie",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Derry Girls",
+      "releaseYear": "2018",
+      "seasons": "2",
+      "episodes": "13",
+      "rating": "8.4",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "The personal exploits of a 16-year-old girl and her family and friends during the Troubles in the early 1990s.",
+      "productionCrew": [
+        {
+          "fullName": "Michael Lennox",
+          "gender": "Male",
+          "origin": "UK",
+          "role": "Director"
+        },
+        {
+          "fullName": "Lisa McGee",
+          "gender": "Female",
+          "origin": "UK",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Lisa McGee",
+          "gender": "Female",
+          "origin": "UK",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Caroline Leddy",
+          "gender": "Female",
+          "origin": "UK",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Liz Lewin",
+          "gender": "Female",
+          "origin": "UK",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Saoirse-Monica Jackson",
+          "gender": "Female",
+          "origin": "UK",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Saoirse-Monica Jackson",
+          "gender": "Female",
+          "origin": "UK",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Nicola Coughlan",
+          "gender": "Female",
+          "origin": "UK",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Jamie-Lee O'Donnell",
+          "gender": "Female",
+          "origin": "UK",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Night Court",
+      "releaseYear": "1984",
+      "seasons": "9",
+      "episodes": "193",
+      "rating": "7.7",
+      "language": "English",
+      "genres": ["Comedy"],
+      "resume": "An eccentric fun-loving judge presides over an urban night court and all the silliness going on there.",
+      "productionCrew": [
+        {
+          "fullName": "Jeff Melman",
+          "gender": "Male",
+          "origin": "UK",
+          "role": "Director"
+        },
+        {
+          "fullName": "Jim Drake",
+          "gender": "Male",
+          "origin": "UK",
+          "role": "Director"
+        },
+        {
+          "fullName": "Reinhold Weege",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Tim Steele",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Harry Anderson",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "John Larroquette",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Richard Moll",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Charles Robinson",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Baskets",
+      "releaseYear": "2016",
+      "seasons": "4",
+      "episodes": "40",
+      "rating": "7.6",
+      "language": "English",
+      "genres": ["Comedy", "Drama"],
+      "resume": "An eccentric fun-loving judge presides over an urban night court and all the silliness going on there.",
+      "productionCrew": [
+        {
+          "fullName": "Jonathan Krisel",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Zach Galifianakis",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Louis C.K.",
+          "gender": "Male",
+          "origin": "Canada",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Jonathan Krisel",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Zach Galifianakis",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Blair Breard",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jonathan Krisel",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Joshua Moshier",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Zach Galifianakis",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Martha Kelly",
+          "gender": "Femle",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Louie Anderson",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Alex Morris",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "Insecure",
+      "releaseYear": "2016",
+      "seasons": "5",
+      "episodes": "44",
+      "rating": "7.9",
+      "language": "English",
+      "genres": ["Comedy", "Romance"],
+      "resume": "Follows the awkward experiences and racy tribulations of a modern-day African-American woman.",
+      "productionCrew": [
+        {
+          "fullName": "Melina Matsoukas",
+          "gender": "Female",
+          "origin": "Greece",
+          "role": "Director"
+        },
+        {
+          "fullName": "Kevin Bray",
+          "gender": "Female",
+          "origin": "Greece",
+          "role": "Director"
+        },
+        {
+          "fullName": "Issa Rae",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Larry Wilmore",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Amy Aniobi",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Dave Becky",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Jonathan Berry",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Raphael Saadiq",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Musician"
+        },
+        {
+          "fullName": "Issa Rae",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Yvonne Orji",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Jay Ellis",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Natasha Rothwell",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    },
+    {
+      "title": "The Big Bang Theory",
+      "releaseYear": "2007",
+      "seasons": "12",
+      "episodes": "280",
+      "rating": "8.1",
+      "language": "English",
+      "genres": ["Comedy", "Romance"],
+      "resume": "A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the laboratory.",
+      "productionCrew": [
+        {
+          "fullName": "Mark Cendrowski",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Director"
+        },
+        {
+          "fullName": "Chuck Lorre",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Bill Prady",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Writer"
+        },
+        {
+          "fullName": "Chuck Lorre",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Bill Prady",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Steven Molaro",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Producer"
+        },
+        {
+          "fullName": "Johnny Galecki",
+          "gender": "Male",
+          "origin": "Belgium",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Jim Parsons",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Kaley Cuoco",
+          "gender": "Female",
+          "origin": "USA",
+          "role": "Actor"
+        },
+        {
+          "fullName": "Simon Helberg",
+          "gender": "Male",
+          "origin": "USA",
+          "role": "Actor"
+        }
+      ]
+    }
+  ]
+}
