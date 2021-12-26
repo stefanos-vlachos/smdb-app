@@ -17,11 +17,11 @@ import java.util.Set;
 @AllArgsConstructor
 
 @Entity()
-@Table(name="PRODUCTIONS")
-@SequenceGenerator(name="idGenerator", sequenceName = "PRODUCTIONS_SEQ",initialValue = 1, allocationSize = 1)
+@Table(name = "PRODUCTIONS")
+@SequenceGenerator(name = "idGenerator", sequenceName = "PRODUCTIONS_SEQ", initialValue = 1, allocationSize = 1)
 @Inheritance(strategy = InheritanceType.JOINED)
 
-public class Production extends BaseModel{
+public class Production extends BaseModel {
 
     @NotNull(message = "{title.null}")
     @Column(nullable = false)

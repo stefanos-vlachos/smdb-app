@@ -12,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 
 @Entity()
-@Table(name="CONTRIBUTORS_PRODUCTIONS")
+@Table(name = "CONTRIBUTORS_PRODUCTIONS")
 public class ContributorProduction implements Serializable {
 
     @EmbeddedId
@@ -20,12 +20,12 @@ public class ContributorProduction implements Serializable {
 
     @ManyToOne
     @MapsId("contributorId")
-    @JoinColumn(name="CONTRIBUTOR_ID")
+    @JoinColumn(name = "CONTRIBUTOR_ID")
     private Contributor contributor;
 
     @ManyToOne
     @MapsId("productionId")
-    @JoinColumn(name="PRODUCTION_ID")
+    @JoinColumn(name = "PRODUCTION_ID")
     private Production production;
 
     @Enumerated(EnumType.STRING)

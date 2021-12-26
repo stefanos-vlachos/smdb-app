@@ -13,9 +13,9 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity()
-@Table(name="CONTRIBUTORS")
-@SequenceGenerator(name="idGenerator", sequenceName = "CONTRIBUTORS_SEQ",initialValue = 1, allocationSize = 1)
-public class Contributor extends BaseModel{
+@Table(name = "CONTRIBUTORS")
+@SequenceGenerator(name = "idGenerator", sequenceName = "CONTRIBUTORS_SEQ", initialValue = 1, allocationSize = 1)
+public class Contributor extends BaseModel {
 
     @NotNull(message = "{fullName.null}")
     @Column(length = 50, nullable = false)
