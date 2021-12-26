@@ -2,7 +2,7 @@
   "movies": [
     {
       "title": "The Power of the Dog",
-      "duration": "126m",
+      "duration": "126",
       "releaseYear": "2021",
       "rating": "7.0",
       "language": "English",
@@ -79,7 +79,7 @@
     },
     {
       "title": "Drive my car",
-      "duration": "179m",
+      "duration": "179",
       "releaseYear": "2021",
       "rating": "8.0",
       "language": "Japanese",
@@ -166,7 +166,7 @@
     },
     {
       "title": "Licorice Pizza",
-      "duration": "133m",
+      "duration": "133",
       "releaseYear": "2021",
       "rating": "8.4",
       "language": "English",
@@ -243,7 +243,7 @@
     },
     {
       "title": "The Worst Person in the World",
-      "duration": "127m",
+      "duration": "127",
       "releaseYear": "2021",
       "rating": "8.1",
       "language": "Norwegian",
@@ -326,7 +326,7 @@
     },
     {
       "title": "Portrait of a Lady on Fire.",
-      "duration": "122m",
+      "duration": "122",
       "releaseYear": "2019",
       "rating": "8.1",
       "language": "French",
@@ -391,7 +391,7 @@
     },
     {
       "title": "Nomadland",
-      "duration": "107m",
+      "duration": "107",
       "releaseYear": "2020",
       "rating": "7.4",
       "language": "English",
@@ -474,7 +474,7 @@
     },
     {
       "title": "Never Rarely Sometimes Always",
-      "duration": "101m",
+      "duration": "101",
       "releaseYear": "2020",
       "rating": "7.4",
       "language": "English",
@@ -539,7 +539,7 @@
     },
     {
       "title": "First Cow",
-      "duration": "122m",
+      "duration": "122",
       "releaseYear": "2019",
       "rating": "7.4",
       "language": "English",
@@ -616,7 +616,7 @@
     },
     {
       "title": "Parasite",
-      "duration": "132m",
+      "duration": "132",
       "releaseYear": "2019",
       "rating": "8.6",
       "language": "Korean",
@@ -693,7 +693,7 @@
     },
     {
       "title": "The Irishman",
-      "duration": "209m",
+      "duration": "209",
       "releaseYear": "2019",
       "rating": "7.8",
       "language": "English",
@@ -776,7 +776,7 @@
     },
     {
       "title": "The Shawshank Redemption",
-      "duration": "142m",
+      "duration": "142",
       "releaseYear": "1994",
       "rating": "9.3",
       "language": "English",
@@ -853,7 +853,7 @@
     },
     {
       "title": "The Godfather",
-      "duration": "175m",
+      "duration": "175",
       "releaseYear": "1972",
       "rating": "9.2",
       "language": "English",
@@ -924,7 +924,7 @@
     },
     {
       "title": "The Dark Knight",
-      "duration": "152m",
+      "duration": "152",
       "releaseYear": "2008",
       "rating": "9.0",
       "language": "English",
@@ -1019,7 +1019,7 @@
     },
     {
       "title": "12 Angry Men",
-      "duration": "96m",
+      "duration": "96",
       "releaseYear": "1957",
       "rating": "9.0",
       "language": "English",
@@ -1090,7 +1090,7 @@
     },
     {
       "title": "Schindler's List",
-      "duration": "195m",
+      "duration": "195",
       "releaseYear": "1993",
       "rating": "8.9",
       "language": "English",
@@ -1167,7 +1167,7 @@
     },
     {
       "title": "The Lord of the Rings: The Fellowship of the Ring",
-      "duration": "178m",
+      "duration": "178",
       "releaseYear": "2001",
       "rating": "8.8",
       "language": "English",
@@ -1256,7 +1256,7 @@
     },
     {
       "title": "Spider-Man: No Way Home",
-      "duration": "148m",
+      "duration": "148",
       "releaseYear": "2021",
       "rating": "9.1",
       "language": "English",
@@ -1345,7 +1345,7 @@
     },
     {
       "title": "Pulp Fiction",
-      "duration": "154m",
+      "duration": "154",
       "releaseYear": "1994",
       "rating": "8.9",
       "language": "English",
@@ -1422,7 +1422,7 @@
     },
     {
       "title": "Fight Club",
-      "duration": "139m",
+      "duration": "139",
       "releaseYear": "1999",
       "rating": "8.8",
       "language": "English",
@@ -1505,7 +1505,7 @@
     },
     {
       "title": "Inception",
-      "duration": "148m",
+      "duration": "148",
       "releaseYear": "2010",
       "rating": "8.8",
       "language": "English",
@@ -1576,7 +1576,7 @@
     },
     {
       "title": "The Matrix",
-      "duration": "136m",
+      "duration": "136",
       "releaseYear": "1999",
       "rating": "8.7",
       "language": "English",
@@ -1665,7 +1665,7 @@
     },
     {
       "title": "Kill Bill Volume 1",
-      "duration": "111m",
+      "duration": "111",
       "releaseYear": "2003",
       "rating": "8.1",
       "language": "English",
@@ -1748,7 +1748,7 @@
     },
     {
       "title": "Don't Look Up",
-      "duration": "138m",
+      "duration": "138",
       "releaseYear": "2021",
       "rating": "7.4",
       "language": "English",
@@ -1825,7 +1825,7 @@
     },
     {
       "title": "Home Alone",
-      "duration": "103m",
+      "duration": "103",
       "releaseYear": "1990",
       "rating": "7.6",
       "language": "English",
@@ -1902,7 +1902,7 @@
     },
     {
       "title": "Love Actually",
-      "duration": "135m",
+      "duration": "135",
       "releaseYear": "2003",
       "rating": "7.6",
       "language": "English",

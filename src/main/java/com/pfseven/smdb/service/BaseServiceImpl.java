@@ -24,14 +24,14 @@ public abstract class BaseServiceImpl<T extends BaseModel> extends AbstractLogCo
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED, rollbackFor = Exception.class)
-    public List<T> createAll(List<T> entities) {
-        return getRepository().saveAll(entities);
+    public List<T> createAll(T... entities) {
+        return createAll(Arrays.asList(entities));
     }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED, rollbackFor = Exception.class)
-    public List<T> createAll(T... entities) {
-        return createAll(Arrays.asList(entities));
+    public List<T> createAll(List<T> entities) {
+        return getRepository().saveAll(entities);
     }
 
     @Override
