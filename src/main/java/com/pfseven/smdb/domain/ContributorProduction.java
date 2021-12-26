@@ -1,11 +1,16 @@
 package com.pfseven.smdb.domain;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+
 @Entity()
 @Table(name="CONTRIBUTORS_PRODUCTIONS")
 public class ContributorProduction implements Serializable {
