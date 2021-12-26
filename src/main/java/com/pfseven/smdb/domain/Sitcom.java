@@ -15,9 +15,9 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @SuperBuilder
 @Entity()
-@Table(name="SITCOMS")
-@SequenceGenerator(name="idGenerator", sequenceName = "SITCOMS_SEQ", initialValue = 1, allocationSize = 1)
-public class Sitcom extends Production{
+@Table(name = "SITCOMS")
+@SequenceGenerator(name = "idGenerator", sequenceName = "SITCOMS_SEQ", initialValue = 1, allocationSize = 1)
+public class Sitcom extends Production {
 
     @NotNull(message = "{seasons.null}")
     @Column(nullable = false)

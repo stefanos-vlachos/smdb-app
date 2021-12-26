@@ -16,9 +16,9 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 
 @Entity()
-@Table(name="MOVIES")
-@SequenceGenerator(name="idGenerator", sequenceName = "MOVIES_SEQ",initialValue = 1, allocationSize = 1)
-public class Movie extends Production{
+@Table(name = "MOVIES")
+@SequenceGenerator(name = "idGenerator", sequenceName = "MOVIES_SEQ", initialValue = 1, allocationSize = 1)
+public class Movie extends Production {
 
     @NotNull(message = "{duration.null}")
     @Column(nullable = false)
