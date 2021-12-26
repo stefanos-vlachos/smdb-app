@@ -2,6 +2,8 @@ package com.pfseven.smdb.bootstrap;
 
 import com.pfseven.smdb.base.AbstractLogComponent;
 import com.pfseven.smdb.domain.*;
+import com.pfseven.smdb.service.ContributorProductionService;
+import com.pfseven.smdb.service.ContributorService;
 import com.pfseven.smdb.service.MovieService;
 import lombok.RequiredArgsConstructor;
 
@@ -24,11 +26,11 @@ import java.util.*;
 public class BaseContentCreatorRunner extends AbstractLogComponent implements CommandLineRunner {
 
     private final MovieService movieService;
+    private final ContributorService contributorService;
+    private final ContributorProductionService contributorProductionService;
 
     @Override
     public void run(String... args) throws Exception {
-
-        List<Movie> movies = new ArrayList<>();
 
         JSONParser parser = new JSONParser();
         JSONObject obj = (JSONObject) parser.parse(new FileReader(ResourceUtils.getFile("classpath:movies.json")));
@@ -36,6 +38,10 @@ public class BaseContentCreatorRunner extends AbstractLogComponent implements Co
         Iterator<JSONObject> moviesIterator = moviesObjects.iterator();
 
         while (moviesIterator.hasNext()) {
+
+            Set<ContributorProduction> contributions = new HashSet<>();
+            Set<Contributor> contributors = new HashSet<>();
+
             Set<Genre> genres = new HashSet<>();
             JSONObject element = moviesIterator.next();
 
@@ -52,11 +58,11 @@ public class BaseContentCreatorRunner extends AbstractLogComponent implements Co
                     .genres(genres)
                     .resume((String) element.get("resume"))
                     .build();
+            movieService.create(movie);
 
-            /*JSONArray contributorsArray = (JSONArray) element.get("productionCrew");
+            JSONArray contributorsArray = (JSONArray) element.get("productionCrew");
             Iterator<JSONObject> contributorsIterator = contributorsArray.iterator();
 
-            Set<ContributorProduction> contributions = new HashSet<>();
             while (contributorsIterator.hasNext()) {
                 JSONObject contributorObject = contributorsIterator.next();
                 Contributor contributor = Contributor.builder()
@@ -64,18 +70,11 @@ public class BaseContentCreatorRunner extends AbstractLogComponent implements Co
                         .gender((String) contributorObject.get("gender"))
                         .origin((String) contributorObject.get("origin"))
                         .build();
-                ContributorProduction contribution = ContributorProduction.builder()
-                        .production(movie)
-                        .role(Role.roleCompare((String) contributorObject.get("origin")))
-                        .contributor(contributor)
-                        .build();
-                contributions.add(contribution);
-            }*/
+                if(contributorService.findContributorByFullNameAndAndOriginAndGender(
+                        contributor.getFullName(), contributor.getOrigin(), contributor.getGender())==null)
+                    contributorService.create(contributor);
 
-            movies.add(movie);
-
+            }
         }
-
-        movieService.createAll(movies);
     }
 }
