@@ -11,9 +11,10 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Data
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@SuperBuilder
+
 @Entity()
 @Table(name = "SITCOMS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "SITCOMS_SEQ", initialValue = 1, allocationSize = 1)
