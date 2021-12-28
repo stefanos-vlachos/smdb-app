@@ -13,18 +13,19 @@ import java.io.Serializable;
 
 @Entity()
 @Table(name = "CONTRIBUTORS_PRODUCTIONS")
-public class ContributorProduction implements Serializable {
+@SequenceGenerator(name = "idGenerator", sequenceName = "CONTRIBUTORS_PRODUCTIONS_SEQ", initialValue = 1, allocationSize = 1)
+public class ContributorProduction extends BaseModel {
 
-    @EmbeddedId
-    private ContributionKey contributionKey;
+    /*@EmbeddedId
+    private ContributionKey contributionKey;*/
 
-    @ManyToOne
-    @MapsId("contributorId")
+    @ManyToOne(cascade = CascadeType.ALL)
+    //@MapsId("contributorId")
     @JoinColumn(name = "CONTRIBUTOR_ID")
     private Contributor contributor;
 
-    @ManyToOne
-    @MapsId("productionId")
+    @ManyToOne(cascade = CascadeType.ALL)
+    //@MapsId("productionId")
     @JoinColumn(name = "PRODUCTION_ID")
     private Production production;
 

@@ -2,6 +2,7 @@ package com.pfseven.smdb.bootstrap;
 
 import com.pfseven.smdb.base.AbstractLogComponent;
 import com.pfseven.smdb.domain.*;
+import com.pfseven.smdb.service.ContributorProductionService;
 import com.pfseven.smdb.service.ContributorService;
 import com.pfseven.smdb.service.MovieService;
 import com.pfseven.smdb.service.SitcomService;
@@ -28,6 +29,7 @@ public class BaseContentCreatorRunner extends AbstractLogComponent implements Co
     private final MovieService movieService;
     private final SitcomService sitcomService;
     private final ContributorService contributorService;
+    private final ContributorProductionService contributorProductionService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -50,7 +52,7 @@ public class BaseContentCreatorRunner extends AbstractLogComponent implements Co
                     .build();
             movieService.create(movie);
 
-            loadContributors(object);
+            loadContributors(object, movie);
         }
 
         fileObject = (JSONObject) parser.parse(new FileReader(ResourceUtils.getFile("classpath:sitcoms.json")));
@@ -72,7 +74,7 @@ public class BaseContentCreatorRunner extends AbstractLogComponent implements Co
                     .build();
             sitcomService.create(sitcom);
 
-            loadContributors(object);
+            //loadContributors(object, );
         }
     }
 
@@ -85,7 +87,7 @@ public class BaseContentCreatorRunner extends AbstractLogComponent implements Co
         return genres;
     }
     
-    private void loadContributors(JSONObject object){
+    private void loadContributors(JSONObject object, Movie movie){
         JSONArray contributorsArray = (JSONArray) object.get("productionCrew");
         Iterator<JSONObject> contributorsIterator = contributorsArray.iterator();
 
@@ -100,6 +102,20 @@ public class BaseContentCreatorRunner extends AbstractLogComponent implements Co
             if(contributorService.findContributorByFullNameAndAndOriginAndGender(
                     contributor.getFullName(), contributor.getOrigin(), contributor.getGender())==null)
                 contributorService.create(contributor);
+
+            ContributorProduction contributorProduction = ContributorProduction.builder()
+                    //.production(movie)
+                    //.contributor(contributor)
+                    .role(Role.roleCompare((String) contributorObject.get("role")))
+                    .build();
+
+            contributorProductionService.create(contributorProduction);
+
+            /*movie.getContributorProductions().add(contributorProduction);
+            contributor.getContributorProductions().add(contributorProduction);
+            movieService.update(movie);
+            contributorService.update(contributor);*/
+
         }
     }
 }
