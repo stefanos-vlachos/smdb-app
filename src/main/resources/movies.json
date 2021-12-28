@@ -101,12 +101,14 @@
         {
           "fullName": "Takamasa Oe",
           "gender": "Male",
-          "origin": "Japan"
+          "origin": "Japan",
+          "role": "Writer"
         },
         {
           "fullName": "Haruki Murakami",
           "gender": "Male",
-          "origin": "Japan"
+          "origin": "Japan",
+          "role": "Writer"
         },
         {
           "fullName": "Tsuyoshi Goro",
@@ -1250,7 +1252,7 @@
           "fullName": "Sala Baker",
           "gender": "Male",
           "origin": "UK",
-          "role": "New Zealand"
+          "role": "Actor"
         }
       ]
     },
