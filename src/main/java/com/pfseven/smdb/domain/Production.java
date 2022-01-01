@@ -50,7 +50,14 @@ public class Production extends BaseModel {
     @Column(length = 2048, nullable = false)
     private String resume;
 
-    @OneToMany(mappedBy = "production")
+    @OneToMany(mappedBy = "production", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.EAGER)
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Set<ContributorProduction> contributorProductions = new HashSet<>();
+
+    public void addContribution(ContributorProduction contribution){
+        this.contributorProductions.add(contribution);
+    }
+
 }
 

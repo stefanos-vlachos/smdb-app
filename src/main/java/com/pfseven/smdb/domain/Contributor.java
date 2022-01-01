@@ -29,7 +29,12 @@ public class Contributor extends BaseModel {
     @Column(length = 20, nullable = false)
     private String origin;
 
-    @OneToMany(mappedBy = "contributor")
+    @OneToMany(mappedBy = "contributor", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.EAGER)
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Set<ContributorProduction> contributorProductions = new HashSet<>();
 
+    public void addContribution(ContributorProduction contribution){
+        getContributorProductions().add(contribution);
+    }
 }

@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface ContributorRepository extends JpaRepository<Contributor, Long> {
     Contributor findContributorByFullNameAndAndOriginAndGender(String fullName, String origin, String gender);
     Contributor findContributorByFullName(String fullName);
+    Boolean existsContributorByFullName(String fullName);
+    Boolean existsByFullName(Contributor contributor);
 }

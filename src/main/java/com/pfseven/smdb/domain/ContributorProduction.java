@@ -2,9 +2,9 @@ package com.pfseven.smdb.domain;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Data
 @SuperBuilder
@@ -16,16 +16,11 @@ import java.io.Serializable;
 @SequenceGenerator(name = "idGenerator", sequenceName = "CONTRIBUTORS_PRODUCTIONS_SEQ", initialValue = 1, allocationSize = 1)
 public class ContributorProduction extends BaseModel {
 
-    /*@EmbeddedId
-    private ContributionKey contributionKey;*/
-
     @ManyToOne(cascade = CascadeType.ALL)
-    //@MapsId("contributorId")
     @JoinColumn(name = "CONTRIBUTOR_ID")
     private Contributor contributor;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    //@MapsId("productionId")
     @JoinColumn(name = "PRODUCTION_ID")
     private Production production;
 

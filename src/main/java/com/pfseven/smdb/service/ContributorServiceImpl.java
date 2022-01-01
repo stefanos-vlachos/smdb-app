@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.NoSuchElementException;
+
 @Service
 @RequiredArgsConstructor
 public class ContributorServiceImpl extends BaseServiceImpl<Contributor> implements ContributorService {
@@ -25,5 +27,10 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
     @Override
     public Contributor findContributorByFullName(String fullName) {
         return contributorRepository.findContributorByFullName(fullName);
+    }
+
+    @Override
+    public Boolean existsByName(Contributor contributor) {
+        return contributorRepository.existsContributorByFullName(contributor.getFullName());
     }
 }

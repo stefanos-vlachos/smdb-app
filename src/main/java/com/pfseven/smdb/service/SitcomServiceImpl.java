@@ -15,4 +15,9 @@ public class SitcomServiceImpl extends BaseServiceImpl<Sitcom> implements Sitcom
     public JpaRepository<Sitcom, Long> getRepository() {
         return sitcomRepository;
     }
+
+    @Override
+    public Sitcom findByTitle(String title) {
+        return sitcomRepository.findByTitle(title);
+    }
 }
