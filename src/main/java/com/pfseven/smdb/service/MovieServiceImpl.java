@@ -1,7 +1,9 @@
 package com.pfseven.smdb.service;
 
+import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.repository.MovieRepository;
+import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
@@ -28,4 +30,13 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
         return movieRepository.findTopXRatedMovies(moviesNum);
     }
 
+    @Override
+    public List<Movie> findMoviesByGenres(Genre genre){
+        return  movieRepository.findMoviesByGenres(genre);
+    }
+
+    @Override
+    public  List<KeyValue<Genre,Integer>> findMoviesPerGenre(){
+        return movieRepository.findMoviesPerGenre();
+    }
 }

@@ -4,6 +4,7 @@ import com.pfseven.smdb.base.AbstractLogComponent;
 import com.pfseven.smdb.domain.*;
 import com.pfseven.smdb.service.ContributorService;
 import com.pfseven.smdb.service.SitcomService;
+import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -80,6 +81,8 @@ public class SitcomsContentLoaderRunner extends AbstractLogComponent implements 
         sitcomService.createAll(new ArrayList<Sitcom>(sitcoms.values()));
         contributorService.createAll(new ArrayList<Contributor>(contributors.values()));
 
+        List<Sitcom> s = sitcomService.findSitcomsByGenres(Genre.valueOf("COMEDY"));
+        List<KeyValue<Genre,Integer>> s1 = sitcomService.findSitcomsPerGenre();
     }
 
     private Set<Genre> loadGenres(JSONObject object){

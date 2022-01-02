@@ -4,6 +4,7 @@ import com.pfseven.smdb.base.AbstractLogComponent;
 import com.pfseven.smdb.domain.*;
 import com.pfseven.smdb.service.ContributorService;
 import com.pfseven.smdb.service.MovieService;
+import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -79,7 +80,8 @@ public class MovieContentLoaderRunner extends AbstractLogComponent implements Co
         movieService.createAll(new ArrayList<Movie>(movies.values()));
         contributorService.createAll(new ArrayList<Contributor>(contributors.values()));
 
-        List<Movie> m = movieService.findTopXRatedMovies(2);
+        List<Movie> m1 = movieService.findMoviesByGenres(Genre.valueOf("DRAMA"));
+        List<KeyValue<Genre,Integer>> m2 = movieService.findMoviesPerGenre();
     }
 
     private Set<Genre> loadGenres(JSONObject object){

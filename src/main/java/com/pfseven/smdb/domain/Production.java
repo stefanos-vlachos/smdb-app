@@ -42,7 +42,7 @@ public class Production extends BaseModel {
     private String language;
 
     @Enumerated(EnumType.STRING)
-    @ElementCollection(targetClass = Genre.class)
+    @ElementCollection(targetClass = Genre.class , fetch = FetchType.EAGER)
     @CollectionTable(name = "PRODUCTION_GENRES")
     private Set<Genre> genres;
 
