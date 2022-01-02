@@ -27,13 +27,13 @@ public class Production extends BaseModel {
     @Column(nullable = false)
     private String title;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     @NotNull(message = "{releaseYear.null}")
     @Column(nullable = false)
     private Date releaseYear;
 
     @NotNull(message = "{rating.null}")
-    @Column(precision = 4, nullable = false)
+    @Column(precision = 4, scale = 2, nullable = false)
     @Max(value = 10)
     private BigDecimal rating;
 
