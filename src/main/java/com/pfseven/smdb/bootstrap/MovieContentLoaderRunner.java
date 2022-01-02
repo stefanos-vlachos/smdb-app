@@ -79,6 +79,7 @@ public class MovieContentLoaderRunner extends AbstractLogComponent implements Co
         movieService.createAll(new ArrayList<Movie>(movies.values()));
         contributorService.createAll(new ArrayList<Contributor>(contributors.values()));
 
+        List<Movie> m = movieService.findTopXRatedMovies(2);
     }
 
     private Set<Genre> loadGenres(JSONObject object){
