@@ -2,6 +2,7 @@ package com.pfseven.smdb.domain;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -42,7 +43,7 @@ public class Production extends BaseModel {
     private String language;
 
     @Enumerated(EnumType.STRING)
-    @ElementCollection(targetClass = Genre.class)
+    @ElementCollection(targetClass = Genre.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "PRODUCTION_GENRES")
     private Set<Genre> genres;
 
