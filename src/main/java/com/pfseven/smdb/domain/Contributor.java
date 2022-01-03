@@ -1,5 +1,6 @@
 package com.pfseven.smdb.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -32,6 +33,7 @@ public class Contributor extends BaseModel {
     @OneToMany(mappedBy = "contributor", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.EAGER)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonIgnore
     private Set<ContributorProduction> contributorProductions = new HashSet<>();
 
     public void addContribution(ContributorProduction contribution){

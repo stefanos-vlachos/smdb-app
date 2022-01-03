@@ -1,5 +1,6 @@
 package com.pfseven.smdb.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -42,7 +43,7 @@ public class Production extends BaseModel {
     private String language;
 
     @Enumerated(EnumType.STRING)
-    @ElementCollection(targetClass = Genre.class)
+    @ElementCollection(targetClass = Genre.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "PRODUCTION_GENRES")
     private Set<Genre> genres;
 
@@ -53,6 +54,7 @@ public class Production extends BaseModel {
     @OneToMany(mappedBy = "production", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.EAGER)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
+    @JsonManagedReference("contributorProductions")
     private Set<ContributorProduction> contributorProductions = new HashSet<>();
 
     public void addContribution(ContributorProduction contribution){
