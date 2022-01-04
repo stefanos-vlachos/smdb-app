@@ -1,5 +1,7 @@
 package com.pfseven.smdb.domain;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.pfseven.smdb.util.MovieSerializer;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -18,6 +20,7 @@ import javax.validation.constraints.NotNull;
 @Entity()
 @Table(name = "MOVIES")
 @SequenceGenerator(name = "idGenerator", sequenceName = "MOVIES_SEQ", initialValue = 1, allocationSize = 1)
+@JsonSerialize(using = MovieSerializer.class)
 public class Movie extends Production {
 
     @NotNull(message = "{duration.null}")

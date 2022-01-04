@@ -73,7 +73,7 @@ public class MovieContentLoaderRunner extends AbstractLogComponent implements Co
                 contributorProduction.setRole(Role.roleCompare((String)contributorObject.get("role")));
 
 
-                contributors.get(contributor.getFullName()).addContribution(contributorProduction);
+    //            contributors.get(contributor.getFullName()).addContribution(contributorProduction);
                 movies.get(movie.getTitle()).addContribution(contributorProduction);
             }
         }

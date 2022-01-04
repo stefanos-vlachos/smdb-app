@@ -1,6 +1,7 @@
 package com.pfseven.smdb.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.pfseven.smdb.util.ContributorSerializer;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -16,6 +17,7 @@ import java.util.Set;
 @Entity()
 @Table(name = "CONTRIBUTORS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "CONTRIBUTORS_SEQ", initialValue = 1, allocationSize = 1)
+@JsonSerialize(using = ContributorSerializer.class)
 public class Contributor extends BaseModel {
 
     @NotNull(message = "{fullName.null}")
@@ -33,7 +35,6 @@ public class Contributor extends BaseModel {
     @OneToMany(mappedBy = "contributor", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.EAGER)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @JsonIgnore
     private Set<ContributorProduction> contributorProductions = new HashSet<>();
 
     public void addContribution(ContributorProduction contribution){

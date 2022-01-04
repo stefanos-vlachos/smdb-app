@@ -74,7 +74,7 @@ public class SitcomsContentLoaderRunner extends AbstractLogComponent implements 
                 contributorProduction.setRole(Role.roleCompare((String)contributorObject.get("role")));
 
 
-                contributors.get(contributor.getFullName()).addContribution(contributorProduction);
+ //               contributors.get(contributor.getFullName()).addContribution(contributorProduction);
                 sitcoms.get(sitcom.getTitle()).addContribution(contributorProduction);
             }
         }

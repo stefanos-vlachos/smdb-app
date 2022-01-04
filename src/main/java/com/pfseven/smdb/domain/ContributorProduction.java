@@ -20,7 +20,6 @@ public class ContributorProduction extends BaseModel {
     @JoinColumn(name = "CONTRIBUTOR_ID")
     private Contributor contributor;
 
-    @JsonBackReference("contributorProductions")
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "PRODUCTION_ID")
     private Production production;

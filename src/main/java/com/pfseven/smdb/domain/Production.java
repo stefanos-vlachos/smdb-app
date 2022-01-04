@@ -54,7 +54,6 @@ public class Production extends BaseModel {
     @OneToMany(mappedBy = "production", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.EAGER)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @JsonManagedReference("contributorProductions")
     private Set<ContributorProduction> contributorProductions = new HashSet<>();
 
     public void addContribution(ContributorProduction contribution){
