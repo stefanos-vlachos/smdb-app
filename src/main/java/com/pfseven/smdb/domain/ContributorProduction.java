@@ -1,8 +1,8 @@
 package com.pfseven.smdb.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 
@@ -20,6 +20,7 @@ public class ContributorProduction extends BaseModel {
     @JoinColumn(name = "CONTRIBUTOR_ID")
     private Contributor contributor;
 
+    @JsonBackReference("contributorProductions")
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "PRODUCTION_ID")
     private Production production;
