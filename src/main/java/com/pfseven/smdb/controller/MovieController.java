@@ -23,7 +23,7 @@ public class MovieController extends AbstractController<Movie> {
     }
 
     @GetMapping(params = {"top"})
-    public List<Movie> findTopXRatedMovies(@RequestParam("top") Integer moviesNum) {
-        return movieService.findTopXRatedMovies(moviesNum);
+    public ResponseEntity<ApiResponse<List<Movie>>> findTopXRatedMovies(@RequestParam("top") Integer moviesNum) {
+        return ResponseEntity.ok(ApiResponse.<List<Movie>>builder().data(movieService.findTopXRatedMovies(moviesNum)).build());
     }
 }
