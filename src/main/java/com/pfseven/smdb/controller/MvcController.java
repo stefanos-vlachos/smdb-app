@@ -39,15 +39,12 @@ public class MvcController {
         return "movieDetails";
     }
 
-
     @PostMapping("/search/movie")
     public String findMovie(Model model ,@Valid @RequestParam("title") String title) {
         Movie movie = movieService.findByTitle(title);
         model.addAttribute("movie",movie );
         return "movieDetails";
     }
-
-
 
     @GetMapping("/allactors")
     public String showContributors(Model model) {
