@@ -16,11 +16,8 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     @Query("select m from Movie m join fetch m.contributorProductions where m.title = ?1")
     Movie findByTitle(String title);
 
-    @Query(value = "SELECT TOP ?1 * " +
-            "FROM (MOVIES " +
-            "INNER JOIN PRODUCTIONS ON (MOVIES.id=PRODUCTIONS.ID)) " +
-            "ORDER BY PRODUCTIONS.rating DESC ", nativeQuery = true)
-    List<Movie> findTopXRatedMovies(Integer moviesNum);
+    @Query("select distinct m from Movie m join fetch m.contributorProductions order by m.rating desc")
+    List<Movie> orderMoviesByRating();
 
     List<Movie> findMoviesByGenres(Genre genre);
 

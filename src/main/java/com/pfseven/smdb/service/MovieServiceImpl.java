@@ -28,7 +28,7 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
 
     @Override
     public List<Movie> findTopXRatedMovies(Integer moviesNum){
-        return movieRepository.findTopXRatedMovies(moviesNum);
+        return movieRepository.orderMoviesByRating().subList(0,moviesNum);
     }
 
     @Override
