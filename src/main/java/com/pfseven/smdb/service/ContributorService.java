@@ -1,6 +1,8 @@
 package com.pfseven.smdb.service;
 
 import com.pfseven.smdb.domain.Contributor;
+import com.pfseven.smdb.domain.Movie;
+import com.pfseven.smdb.domain.Role;
 
 import java.util.List;
 
@@ -16,4 +18,8 @@ public interface ContributorService extends BaseService<Contributor, Long> {
     List<Contributor> findAllLazy();
 
     List<Contributor> findAllActors();
+
+    List<Movie> findMoviesOfContributor(Long id);
+
+    List<Movie> findMoviesOfContributorByRole (Long id, Role role);
 }
