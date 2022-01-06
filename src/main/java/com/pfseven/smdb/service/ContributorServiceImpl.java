@@ -1,8 +1,6 @@
 package com.pfseven.smdb.service;
 
-import com.pfseven.smdb.domain.Contributor;
-import com.pfseven.smdb.domain.Movie;
-import com.pfseven.smdb.domain.Role;
+import com.pfseven.smdb.domain.*;
 import com.pfseven.smdb.repository.ContributorRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -69,6 +67,26 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
     @Override
     public List<Movie> findMoviesOfContributorByRole(Long id, Role role) {
         return contributorRepository.findMoviesOfContributorByRole(id, role);
+    }
+
+    @Override
+    public List<Sitcom> findSitcomsOfContributor(Long id) {
+        return contributorRepository.findSitcomsOfContributor(id);
+    }
+
+    @Override
+    public List<Sitcom> findSitcomsOfContributorByRole(Long id, Role role) {
+        return contributorRepository.findSitcomsOfContributorByRole(id, role);
+    }
+
+    @Override
+    public List<Production> findContentOfContributor(Long id) {
+        return contributorRepository.findContentOfConributor(id);
+    }
+
+    @Override
+    public List<Production> findContentOfContributorByRole(Long id, Role role) {
+        return contributorRepository.findContentOfConributorByRole(id, role);
     }
 
 }
