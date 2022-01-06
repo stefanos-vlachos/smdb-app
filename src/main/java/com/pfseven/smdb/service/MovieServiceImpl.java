@@ -1,5 +1,6 @@
 package com.pfseven.smdb.service;
 
+import com.pfseven.smdb.domain.Contributor;
 import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.repository.MovieRepository;
@@ -39,4 +40,28 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     public  List<KeyValue<Genre,Integer>> findMoviesPerGenre(){
         return movieRepository.findMoviesPerGenre();
     }
+
+
+    @Override
+    public Movie find(Long id) {
+        return findLazy(id);
+    }
+
+    @Override
+    public Movie findLazy(Long id) {
+        return movieRepository.findLazy(id);
+    }
+
+    @Override
+    public List<Movie> findAll() {
+        return findAllLazy();
+    }
+
+    @Override
+    public List<Movie> findAllLazy() {
+        return movieRepository.findAllLazy();
+    }
+
+
+
 }

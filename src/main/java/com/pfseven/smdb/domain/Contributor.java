@@ -1,5 +1,9 @@
 package com.pfseven.smdb.domain;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.pfseven.smdb.util.ContributorSerializer;
 import lombok.*;
@@ -32,7 +36,7 @@ public class Contributor extends BaseModel {
     @Column(length = 20, nullable = false)
     private String origin;
 
-    @OneToMany(mappedBy = "contributor", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "contributor", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.LAZY)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<ContributorProduction> contributorProductions = new HashSet<>();

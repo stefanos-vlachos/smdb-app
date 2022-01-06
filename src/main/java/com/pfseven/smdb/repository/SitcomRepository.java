@@ -18,4 +18,11 @@ public interface SitcomRepository extends JpaRepository<Sitcom, Long> {
             "from Production p  inner join p.genres genre where type(p)=Sitcom group by genre")
     List<KeyValue<Genre,Integer>> findSitcomsPerGenre();
     List<Sitcom> findSitcomsByGenres(Genre genre);
+
+
+    @Query("select s from Sitcom s join fetch s.contributorProductions where s.id = ?1")
+    Sitcom findLazy(Long id);
+
+    @Query("select distinct s from Sitcom s join fetch s.contributorProductions")
+    List<Sitcom> findAllLazy();
 }

@@ -1,6 +1,5 @@
 package com.pfseven.smdb.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 

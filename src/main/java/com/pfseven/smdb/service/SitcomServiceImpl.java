@@ -35,4 +35,27 @@ public class SitcomServiceImpl extends BaseServiceImpl<Sitcom> implements Sitcom
     public List<KeyValue<Genre,Integer>> findSitcomsPerGenre(){
         return sitcomRepository.findSitcomsPerGenre();
     }
+
+
+    @Override
+    public Sitcom find(Long id) {
+        return findLazy(id);
+    }
+
+    @Override
+    public Sitcom findLazy(Long id) {
+        return sitcomRepository.findLazy(id);
+    }
+
+    @Override
+    public List<Sitcom> findAll() {
+        return findAllLazy();
+    }
+
+    @Override
+    public List<Sitcom> findAllLazy() {
+        return sitcomRepository.findAllLazy();
+    }
+
+
 }

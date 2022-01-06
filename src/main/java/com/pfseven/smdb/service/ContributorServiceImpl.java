@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -32,5 +33,30 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
     @Override
     public Boolean existsByName(Contributor contributor) {
         return contributorRepository.existsContributorByFullName(contributor.getFullName());
+    }
+
+    @Override
+    public Contributor find(Long id) {
+        return findLazy(id);
+    }
+
+    @Override
+    public Contributor findLazy(Long id) {
+        return contributorRepository.findLazy(id);
+    }
+
+    @Override
+    public List<Contributor> findAll() {
+        return findAllLazy();
+    }
+
+    @Override
+    public List<Contributor> findAllLazy() {
+        return contributorRepository.findAllLazy();
+    }
+
+    @Override
+    public List<Contributor> findAllActors() {
+    return contributorRepository.findAllActors();
     }
 }
