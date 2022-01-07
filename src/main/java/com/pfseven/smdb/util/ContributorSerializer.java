@@ -19,19 +19,22 @@ public class ContributorSerializer extends StdSerializer<Contributor> {
     }
 
     @Override
-    public void serialize(Contributor cp, JsonGenerator gen, SerializerProvider provider)
+    public void serialize(Contributor c, JsonGenerator gen, SerializerProvider provider)
             throws IOException {
 
         gen.writeStartObject();
-        gen.writeStringField("fullName: ",cp.getFullName());
-        gen.writeStringField("Gender: ",cp.getGender());
+        gen.writeStringField("fullName: ",c.getFullName());
+        gen.writeStringField("Gender: ",c.getGender());
 
-        List<String> contributions = new ArrayList<>();
-
-        for(ContributorProduction c: cp.getContributorProductions()){
-            contributions.add(c.getProduction().getTitle() + "(" + c.getProduction().getClass().getSimpleName()+  ")" + " : " + c.getRole().toString() );
+        gen.writeArrayFieldStart("contributions: ");
+        for(ContributorProduction cp: c.getContributorProductions()){
+            gen.writeStartObject();
+            gen.writeObjectField("productionId" , cp.getProduction().getId());
+            gen.writeObjectField("contributorName" , cp.getProduction().getTitle());
+            gen.writeObjectField("role" , cp.getRole().toString() );
+            gen.writeEndObject();
         }
-        gen.writeObjectField("Contributions: " , contributions);
+        gen.writeEndArray();
         gen.writeEndObject();
     }
 

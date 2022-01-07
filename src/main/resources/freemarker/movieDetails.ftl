@@ -23,7 +23,7 @@
     <h3> Contributors </h3>
     <p>
         <#list movie.contributorProductions as contribution>
-          <p> <a href = "./contributordetails?id=${contribution.contributor.id}"> ${contribution.contributor.fullName} </a> as ${contribution.role}</p>
+          <p> <a href = "/contributordetails?id=${contribution.contributor.id}"> ${contribution.contributor.fullName} </a> as ${contribution.role}</p>
         </#list>
     </p>
 
