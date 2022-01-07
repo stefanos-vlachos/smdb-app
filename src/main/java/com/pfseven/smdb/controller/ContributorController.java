@@ -59,6 +59,7 @@ public class ContributorController extends AbstractController<Contributor>{
 
     @GetMapping(headers="action=export")
     public void exportToCSV() throws IOException {
-       contributorService.exportContributorsToCsv(new FileWriter("src/main/resources/contributors.csv"));
+       contributorService.exportContributorsToCsv(new FileWriter("src/main/resources/csvExports/contributors.csv"),
+               new FileWriter("src/main/resources/csvExports/contributorsContributions.csv"));
     }
 }

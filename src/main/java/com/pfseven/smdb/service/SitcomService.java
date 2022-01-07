@@ -19,5 +19,5 @@ public interface SitcomService extends BaseService<Sitcom, Long> {
 
     List<Sitcom> findAllLazy();
 
-    void exportSitcomsToCsv(Writer writer);
+    void exportSitcomsToCsv(Writer sitcomsWriter, Writer contributionsWriter);
 }

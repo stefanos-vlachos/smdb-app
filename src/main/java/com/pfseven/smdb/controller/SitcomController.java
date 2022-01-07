@@ -27,6 +27,7 @@ public class SitcomController extends AbstractController<Sitcom> {
 
     @GetMapping(headers="action=export")
     public void exportToCSV() throws IOException {
-        sitcomService.exportSitcomsToCsv(new FileWriter("src/main/resources/sitcoms.csv"));
+        sitcomService.exportSitcomsToCsv(new FileWriter("src/main/resources/csvExports/sitcoms.csv"),
+                new FileWriter("src/main/resources/csvExports/sitcomsContributions.csv"));
     }
 }

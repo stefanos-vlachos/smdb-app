@@ -21,5 +21,5 @@ public interface MovieService extends BaseService<Movie, Long> {
 
     List<Movie> findAllLazy();
 
-    void exportMoviesToCsv(Writer writer);
+    void exportMoviesToCsv(Writer moviesWriter, Writer contributionsWriter);
 }

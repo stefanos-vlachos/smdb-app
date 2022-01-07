@@ -30,5 +30,5 @@ public interface ContributorService extends BaseService<Contributor, Long> {
 
     List<Production> findContentOfContributorByRole (Long id, Role role);
 
-    void exportContributorsToCsv(Writer writer);
+    void exportContributorsToCsv(Writer contributorsWriter, Writer contributionsWriter);
 }

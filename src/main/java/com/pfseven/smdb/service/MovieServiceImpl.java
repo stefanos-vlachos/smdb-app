@@ -1,6 +1,7 @@
 package com.pfseven.smdb.service;
 
 import com.pfseven.smdb.domain.Contributor;
+import com.pfseven.smdb.domain.ContributorProduction;
 import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.repository.MovieRepository;
@@ -67,14 +68,22 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     }
 
     @Override
-    public void exportMoviesToCsv(Writer writer){
+    public void exportMoviesToCsv(Writer moviesWriter, Writer contributionsWriter){
         List<Movie> movies = findAll();
-        try (CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT)){
-            csvPrinter.printRecord("Movie ID", "Title", "Duration", "Genres", "Language", "Rating", "Release Year", "Resume");
+
+        try (CSVPrinter moviesCsvPrinter = new CSVPrinter(moviesWriter, CSVFormat.DEFAULT);
+            CSVPrinter contributionsCsvPrinter = new CSVPrinter(contributionsWriter, CSVFormat.DEFAULT);){
+
+            moviesCsvPrinter.printRecord("Movie ID", "Title", "Duration", "Genres", "Language", "Rating", "Release Year", "Resume");
+            contributionsCsvPrinter.printRecord("Movie ID", "Title", "Contributor ID", "Contributor Name", "Role");
+
             for(Movie movie : movies) {
-                csvPrinter.printRecord(movie.getId(), movie.getTitle(),
+                moviesCsvPrinter.printRecord(movie.getId(), movie.getTitle(),
                         movie.getDuration(), movie.getGenres(), movie.getLanguage(), movie.getRating(),
                         movie.getReleaseYear(), movie.getResume());
+                for(ContributorProduction cp : movie.getContributorProductions()) {
+                    contributionsCsvPrinter.printRecord(movie.getId(), movie.getTitle(), cp.getContributor().getId(), cp.getContributor().getFullName(), cp.getRole());
+                }
             }
         }catch (IOException e){
             logger.error("Error while writing CSV", e);

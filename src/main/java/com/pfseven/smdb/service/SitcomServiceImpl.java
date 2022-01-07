@@ -1,5 +1,6 @@
 package com.pfseven.smdb.service;
 
+import com.pfseven.smdb.domain.ContributorProduction;
 import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.domain.Sitcom;
@@ -62,14 +63,22 @@ public class SitcomServiceImpl extends BaseServiceImpl<Sitcom> implements Sitcom
     }
 
     @Override
-    public void exportSitcomsToCsv(Writer writer){
+    public void exportSitcomsToCsv(Writer sitcomsWriter, Writer contributionsWriter){
         List<Sitcom> sitcoms = findAll();
-        try (CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT)){
-            csvPrinter.printRecord("Movie ID", "Title", "Genres", "Language", "Rating", "Release Year",  "Seasons", "Episodes", "Resume");
+
+        try (CSVPrinter sitcomsCsvPrinter = new CSVPrinter(sitcomsWriter, CSVFormat.DEFAULT);
+             CSVPrinter contributionsCsvPrinter = new CSVPrinter(contributionsWriter, CSVFormat.DEFAULT);){
+
+            sitcomsCsvPrinter.printRecord("Sitcom ID", "Title", "Genres", "Language", "Rating", "Release Year",  "Seasons", "Episodes", "Resume");
+            contributionsCsvPrinter.printRecord("Sitcom ID", "Title", "Contributor ID", "Contributor Name", "Role");
+
             for(Sitcom sitcom : sitcoms) {
-                csvPrinter.printRecord(sitcom.getId(), sitcom.getTitle(),
+                sitcomsCsvPrinter.printRecord(sitcom.getId(), sitcom.getTitle(),
                         sitcom.getGenres(), sitcom.getLanguage(), sitcom.getRating(),
                         sitcom.getReleaseYear(), sitcom.getSeasons(), sitcom.getEpisodes(), sitcom.getResume());
+                for(ContributorProduction cp : sitcom.getContributorProductions()) {
+                    contributionsCsvPrinter.printRecord(sitcom.getId(), sitcom.getTitle(), cp.getContributor().getId(), cp.getContributor().getFullName(), cp.getRole());
+                }
             }
         }catch (IOException e){
             logger.error("Error while writing CSV", e);

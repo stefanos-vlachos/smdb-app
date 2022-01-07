@@ -94,13 +94,21 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
     }
 
     @Override
-    public void exportContributorsToCsv(Writer writer){
+    public void exportContributorsToCsv(Writer contributorsWriter, Writer contributionsWriter){
         List<Contributor> contributors = findAll();
-        try (CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT)){
+
+        try (CSVPrinter contributorsCsvPrinter = new CSVPrinter(contributorsWriter, CSVFormat.DEFAULT);
+             CSVPrinter contributionsCsvPrinter2 = new CSVPrinter(contributionsWriter, CSVFormat.DEFAULT);){
+
+            contributorsCsvPrinter.printRecord("Contributor ID", "Full Name", "Origin", "Gender");
+            contributionsCsvPrinter2.printRecord("Contributor ID", "Contributor Name", "Production ID", "Production Title", "Role");
+
             for(Contributor contributor : contributors) {
-                csvPrinter.printRecord("Contributor ID", "Full Name", "Origin", "Gender");
-                csvPrinter.printRecord(contributor.getId(), contributor.getFullName(),
+                contributorsCsvPrinter.printRecord(contributor.getId(), contributor.getFullName(),
                         contributor.getOrigin(), contributor.getGender());
+                for (ContributorProduction cp : contributor.getContributorProductions()){
+                    contributionsCsvPrinter2.printRecord(contributor.getId(), contributor.getFullName(), cp.getProduction().getId(), cp.getProduction().getTitle(), cp.getRole());
+                }
             }
         }catch (IOException e){
             logger.error("Error while writing CSV", e);

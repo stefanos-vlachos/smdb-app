@@ -31,6 +31,7 @@ public class MovieController extends AbstractController<Movie> {
 
     @GetMapping(headers="action=export")
     public void exportToCSV() throws IOException {
-        movieService.exportMoviesToCsv(new FileWriter("src/main/resources/movies.csv"));
+        movieService.exportMoviesToCsv(new FileWriter("src/main/resources/csvExports/movies.csv"),
+                new FileWriter("src/main/resources/csvExports/movieContributions.csv"));
     }
 }
