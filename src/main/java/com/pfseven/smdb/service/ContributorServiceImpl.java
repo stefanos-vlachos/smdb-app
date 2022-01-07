@@ -3,9 +3,13 @@ package com.pfseven.smdb.service;
 import com.pfseven.smdb.domain.*;
 import com.pfseven.smdb.repository.ContributorRepository;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -87,6 +91,20 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
     @Override
     public List<Production> findContentOfContributorByRole(Long id, Role role) {
         return contributorRepository.findContentOfConributorByRole(id, role);
+    }
+
+    @Override
+    public void exportContributorsToCsv(Writer writer){
+        List<Contributor> contributors = findAll();
+        try (CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT)){
+            for(Contributor contributor : contributors) {
+                csvPrinter.printRecord("Contributor ID", "Full Name", "Origin", "Gender");
+                csvPrinter.printRecord(contributor.getId(), contributor.getFullName(),
+                        contributor.getOrigin(), contributor.getGender());
+            }
+        }catch (IOException e){
+            logger.error("Error while writing CSV", e);
+        }
     }
 
 }

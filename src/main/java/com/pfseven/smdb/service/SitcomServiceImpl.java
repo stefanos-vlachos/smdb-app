@@ -6,9 +6,13 @@ import com.pfseven.smdb.domain.Sitcom;
 import com.pfseven.smdb.repository.SitcomRepository;
 import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 
 @Service
@@ -57,5 +61,18 @@ public class SitcomServiceImpl extends BaseServiceImpl<Sitcom> implements Sitcom
         return sitcomRepository.findAllLazy();
     }
 
-
+    @Override
+    public void exportSitcomsToCsv(Writer writer){
+        List<Sitcom> sitcoms = findAll();
+        try (CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT)){
+            csvPrinter.printRecord("Movie ID", "Title", "Genres", "Language", "Rating", "Release Year",  "Seasons", "Episodes", "Resume");
+            for(Sitcom sitcom : sitcoms) {
+                csvPrinter.printRecord(sitcom.getId(), sitcom.getTitle(),
+                        sitcom.getGenres(), sitcom.getLanguage(), sitcom.getRating(),
+                        sitcom.getReleaseYear(), sitcom.getSeasons(), sitcom.getEpisodes(), sitcom.getResume());
+            }
+        }catch (IOException e){
+            logger.error("Error while writing CSV", e);
+        }
+    }
 }

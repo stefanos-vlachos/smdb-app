@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 @AllArgsConstructor
@@ -25,5 +27,10 @@ public class MovieController extends AbstractController<Movie> {
     @GetMapping(params = {"top"})
     public ResponseEntity<ApiResponse<List<Movie>>> findTopXRatedMovies(@RequestParam("top") Integer moviesNum) {
         return ResponseEntity.ok(ApiResponse.<List<Movie>>builder().data(movieService.findTopXRatedMovies(moviesNum)).build());
+    }
+
+    @GetMapping(headers="action=export")
+    public void exportToCSV() throws IOException {
+        movieService.exportMoviesToCsv(new FileWriter("src/main/resources/movies.csv"));
     }
 }

@@ -6,9 +6,13 @@ import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.repository.MovieRepository;
 import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVPrinter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 
 @Service
@@ -62,6 +66,19 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
         return movieRepository.findAllLazy();
     }
 
-
+    @Override
+    public void exportMoviesToCsv(Writer writer){
+        List<Movie> movies = findAll();
+        try (CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT)){
+            csvPrinter.printRecord("Movie ID", "Title", "Duration", "Genres", "Language", "Rating", "Release Year", "Resume");
+            for(Movie movie : movies) {
+                csvPrinter.printRecord(movie.getId(), movie.getTitle(),
+                        movie.getDuration(), movie.getGenres(), movie.getLanguage(), movie.getRating(),
+                        movie.getReleaseYear(), movie.getResume());
+            }
+        }catch (IOException e){
+            logger.error("Error while writing CSV", e);
+        }
+    }
 
 }

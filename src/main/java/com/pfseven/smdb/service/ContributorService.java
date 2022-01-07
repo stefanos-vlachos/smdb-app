@@ -2,6 +2,7 @@ package com.pfseven.smdb.service;
 
 import com.pfseven.smdb.domain.*;
 
+import java.io.Writer;
 import java.util.List;
 
 public interface ContributorService extends BaseService<Contributor, Long> {
@@ -28,4 +29,6 @@ public interface ContributorService extends BaseService<Contributor, Long> {
     List<Production> findContentOfContributor (Long id);
 
     List<Production> findContentOfContributorByRole (Long id, Role role);
+
+    void exportContributorsToCsv(Writer writer);
 }

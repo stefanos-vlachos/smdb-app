@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -53,5 +55,10 @@ public class ContributorController extends AbstractController<Contributor>{
     @GetMapping(headers = "action=getContent", params = {"id, role"})
     public ResponseEntity<ApiResponse<List<Production>>> findContentOfContributorByRole(@RequestParam("id") Long id, @RequestParam("role") String role) {
         return ResponseEntity.ok(ApiResponse.<List<Production>>builder().data(contributorService.findContentOfContributorByRole(id, Role.roleCompare(role))).build());
+    }
+
+    @GetMapping(headers="action=export")
+    public void exportToCSV() throws IOException {
+       contributorService.exportContributorsToCsv(new FileWriter("src/main/resources/contributors.csv"));
     }
 }
