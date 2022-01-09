@@ -81,8 +81,8 @@ public class SitcomsContentLoaderRunner extends AbstractLogComponent implements 
         sitcomService.createAll(new ArrayList<Sitcom>(sitcoms.values()));
         contributorService.createAll(new ArrayList<Contributor>(contributors.values()));
 
-        List<Sitcom> s = sitcomService.findSitcomsByGenres(Genre.valueOf("COMEDY"));
-        List<KeyValue<Genre,Integer>> s1 = sitcomService.findSitcomsPerGenre();
+        /*List<Sitcom> s = sitcomService.findSitcomsByGenre(Genre.valueOf("COMEDY"));
+        List<KeyValue<Genre,Integer>> s1 = sitcomService.findSitcomsPerGenre();*/
     }
 
     private Set<Genre> loadGenres(JSONObject object){

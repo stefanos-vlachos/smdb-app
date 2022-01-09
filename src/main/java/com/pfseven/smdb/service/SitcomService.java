@@ -12,9 +12,9 @@ public interface SitcomService extends BaseService<Sitcom, Long> {
 
     List<Sitcom> findTopXRatedSitcoms(Integer sitcomsNum);
 
-    List<KeyValue<Genre,Integer>> findSitcomsPerGenre();
+    List<KeyValue<Genre,Integer>> findSitcomsNumberPerGenre();
 
-    List<Sitcom> findSitcomsByGenres(Genre genre);
+    List<Sitcom> findSitcomsByGenre(Genre genre);
 
     Sitcom findLazy(Long id);
 

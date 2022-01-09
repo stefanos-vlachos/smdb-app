@@ -13,7 +13,7 @@ public interface MovieService extends BaseService<Movie, Long> {
 
     List<Movie> findTopXRatedMovies(Integer moviesNum);
 
-    List<Movie> findMoviesByGenres(Genre genre);
+    List<Movie> findMoviesByGenre(Genre genre);
 
     List<KeyValue<Genre,Integer>>findMoviesPerGenre();
 

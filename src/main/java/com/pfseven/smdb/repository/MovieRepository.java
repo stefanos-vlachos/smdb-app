@@ -19,7 +19,8 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     @Query("select distinct m from Movie m join fetch m.contributorProductions order by m.rating desc")
     List<Movie> orderMoviesByRating();
 
-    List<Movie> findMoviesByGenres(Genre genre);
+    @Query("select distinct m from Movie m join fetch m.contributorProductions where ?1 MEMBER OF m.genres")
+    List<Movie> findMoviesByGenre(Genre genre);
 
     @Query("select new com.pfseven.smdb.transfer.KeyValue(genre, count(p.id) )" +
             "from Production p inner join p.genres genre where type(p)=Movie group by genre")

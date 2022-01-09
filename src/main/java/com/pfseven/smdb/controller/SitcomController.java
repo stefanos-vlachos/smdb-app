@@ -2,6 +2,7 @@ package com.pfseven.smdb.controller;
 
 
 import com.pfseven.smdb.domain.Genre;
+import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.domain.Sitcom;
 import com.pfseven.smdb.service.BaseService;
 import com.pfseven.smdb.service.SitcomService;
@@ -37,14 +38,14 @@ public class SitcomController extends AbstractController<Sitcom> {
         return ResponseEntity.ok(ApiResponse.<List<Sitcom>>builder().data(sitcomService.findTopXRatedSitcoms(sitcomsNum)).build());
     }
 
-    @GetMapping(params = {"g"})
-    public ResponseEntity<ApiResponse<List<Sitcom>>> findSitcomsByGenres(@RequestParam("g") Genre genre) {
-        return ResponseEntity.ok(ApiResponse.<List<Sitcom>>builder().data(sitcomService.findSitcomsByGenres(genre)).build());
+    @GetMapping(params = {"genre"})
+    public ResponseEntity<ApiResponse<List<Sitcom>>> findSitcomsByGenre(@RequestParam("genre") Genre genre) {
+        return ResponseEntity.ok(ApiResponse.<List<Sitcom>>builder().data(sitcomService.findSitcomsByGenre(genre)).build());
     }
 
     @GetMapping(headers = "action=findSitcomsPerGenre")
-    public ResponseEntity<ApiResponse<List<KeyValue<Genre, Integer>>>> findSitcomsPerGenre() {
-        return ResponseEntity.ok(ApiResponse.<List<KeyValue<Genre, Integer>>>builder().data(sitcomService.findSitcomsPerGenre()).build());
+    public ResponseEntity<ApiResponse<List<KeyValue<Genre, Integer>>>> findSitcomsNumberPerGenre() {
+        return ResponseEntity.ok(ApiResponse.<List<KeyValue<Genre, Integer>>>builder().data(sitcomService.findSitcomsNumberPerGenre()).build());
     }
 
     @GetMapping(headers="action=export")
