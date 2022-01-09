@@ -33,7 +33,7 @@ public class SitcomController extends AbstractController<Sitcom> {
     }
 
     @GetMapping(params = {"top"})
-    public ResponseEntity<ApiResponse<List<Sitcom>>> findTopXRatedMovies(@RequestParam("top") Integer sitcomsNum) {
+    public ResponseEntity<ApiResponse<List<Sitcom>>> findTopXRatedSitcoms(@RequestParam("top") Integer sitcomsNum) {
         return ResponseEntity.ok(ApiResponse.<List<Sitcom>>builder().data(sitcomService.findTopXRatedSitcoms(sitcomsNum)).build());
     }
 
