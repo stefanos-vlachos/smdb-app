@@ -19,8 +19,11 @@ public interface SitcomRepository extends JpaRepository<Sitcom, Long> {
     @Query("select new com.pfseven.smdb.transfer.KeyValue(genre, count(p.id) )" +
             "from Production p  inner join p.genres genre where type(p)=Sitcom group by genre")
     List<KeyValue<Genre,Integer>> findSitcomsPerGenre();
+
     List<Sitcom> findSitcomsByGenres(Genre genre);
 
+    @Query("select distinct s from Sitcom s join fetch s.contributorProductions order by s.rating desc")
+    List<Sitcom> orderSitcomsByRating();
 
     @Query("select s from Sitcom s join fetch s.contributorProductions where s.id = ?1")
     Sitcom findLazy(Long id);

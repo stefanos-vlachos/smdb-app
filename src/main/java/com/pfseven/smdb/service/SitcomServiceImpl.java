@@ -32,6 +32,11 @@ public class SitcomServiceImpl extends BaseServiceImpl<Sitcom> implements Sitcom
     }
 
     @Override
+    public List<Sitcom> findTopXRatedSitcoms(Integer sitcomsNum) {
+        return sitcomRepository.orderSitcomsByRating().subList(0,sitcomsNum);
+    }
+
+    @Override
     public List<Sitcom> findSitcomsByGenres(Genre genre){
         return  sitcomRepository.findSitcomsByGenres(genre);
     }
