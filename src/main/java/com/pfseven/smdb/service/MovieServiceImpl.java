@@ -42,8 +42,8 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     }
 
     @Override
-    public  List<KeyValue<Genre,Integer>> findMoviesPerGenre(){
-        return movieRepository.findMoviesPerGenre();
+    public  List<KeyValue<Genre,Integer>> findMoviesNumberPerGenre(){
+        return movieRepository.findMoviesNumberPerGenre();
     }
 
 

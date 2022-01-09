@@ -36,9 +36,9 @@ public class MovieController extends AbstractController<Movie> {
         return ResponseEntity.ok(ApiResponse.<List<Movie>>builder().data(movieService.findMoviesByGenre(genre)).build());
     }
 
-    @GetMapping(headers = "action=findMoviesPerGenre")
-    public ResponseEntity<ApiResponse<List<KeyValue<Genre, Integer>>>> findMoviesPerGenre() {
-        return ResponseEntity.ok(ApiResponse.<List<KeyValue<Genre, Integer>>>builder().data(movieService.findMoviesPerGenre()).build());
+    @GetMapping(headers = "action=findMoviesNumberPerGenre")
+    public ResponseEntity<ApiResponse<List<KeyValue<Genre, Integer>>>> findMoviesNumberPerGenre() {
+        return ResponseEntity.ok(ApiResponse.<List<KeyValue<Genre, Integer>>>builder().data(movieService.findMoviesNumberPerGenre()).build());
     }
 
     @GetMapping(headers="action=export")

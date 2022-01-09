@@ -15,7 +15,7 @@ public interface MovieService extends BaseService<Movie, Long> {
 
     List<Movie> findMoviesByGenre(Genre genre);
 
-    List<KeyValue<Genre,Integer>>findMoviesPerGenre();
+    List<KeyValue<Genre,Integer>>findMoviesNumberPerGenre();
 
     Movie findLazy(Long id);
 

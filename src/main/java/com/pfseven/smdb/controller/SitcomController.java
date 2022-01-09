@@ -43,7 +43,7 @@ public class SitcomController extends AbstractController<Sitcom> {
         return ResponseEntity.ok(ApiResponse.<List<Sitcom>>builder().data(sitcomService.findSitcomsByGenre(genre)).build());
     }
 
-    @GetMapping(headers = "action=findSitcomsPerGenre")
+    @GetMapping(headers = "action=findSitcomsNumberPerGenre")
     public ResponseEntity<ApiResponse<List<KeyValue<Genre, Integer>>>> findSitcomsNumberPerGenre() {
         return ResponseEntity.ok(ApiResponse.<List<KeyValue<Genre, Integer>>>builder().data(sitcomService.findSitcomsNumberPerGenre()).build());
     }
