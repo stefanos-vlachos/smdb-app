@@ -1,11 +1,17 @@
+<#import "base.ftl" as base>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MOVIES</title>
+	<@base.head>
+	</@base.head>
+	<title>Movies</title>
 </head>
 <body>
 
-<nav> <a href="/">Home </a></nav>
+<@base.navbar>
+</@base.navbar>
+
 
 <div class="container">
 	<div class="row">
@@ -25,7 +31,7 @@
 				<tbody>
 				<#list movies as movie>
 					<tr>
-						<td>${movie.id}</td>
+						<td>${movie?counter}</td>
 						<td><a href = "./moviedetails?id=${movie.id}">${movie.title}</a></td>
 						<td>${movie.releaseYear}</td>
 						<td>${movie.rating}</td>

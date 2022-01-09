@@ -1,7 +1,7 @@
 package com.pfseven.smdb.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.pfseven.smdb.util.ContributorSerializer;
+import com.pfseven.smdb.serializer.ContributorSerializer;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import javax.persistence.*;

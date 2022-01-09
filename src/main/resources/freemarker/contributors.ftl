@@ -1,11 +1,16 @@
+<#import "base.ftl" as base>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MOVIES</title>
+    <@base.head>
+    </@base.head>
+    <title>Actors</title>
 </head>
 <body>
 
-<nav> <a href="/">Home </a></nav>
+<@base.navbar>
+</@base.navbar>
 
 <div class="container">
     <div class="row">
@@ -20,8 +25,8 @@
                 <tbody>
                 <#list contributors as contributor>
                     <tr>
-                        <td>${contributor.id}</td>
-                        <td>${contributor.fullName}</td>
+                        <td>${contributor?counter}</td>
+                        <td><a href = "./contributordetails?id=${contributor.id}">${contributor.fullName}</td>
 
                     </tr>
                 </#list>

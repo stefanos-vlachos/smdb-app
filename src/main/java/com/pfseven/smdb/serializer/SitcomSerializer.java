@@ -1,4 +1,4 @@
-package com.pfseven.smdb.util;
+package com.pfseven.smdb.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;

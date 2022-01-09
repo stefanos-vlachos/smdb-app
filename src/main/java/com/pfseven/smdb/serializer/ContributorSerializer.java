@@ -1,4 +1,4 @@
-package com.pfseven.smdb.util;
+package com.pfseven.smdb.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.pfseven.smdb.domain.Contributor;
 import com.pfseven.smdb.domain.ContributorProduction;
 import java.io.IOException;
-import java.util.*;
+import java.util.Locale;
 
 public class ContributorSerializer extends StdSerializer<Contributor> {
 
@@ -30,7 +30,7 @@ public class ContributorSerializer extends StdSerializer<Contributor> {
         for(ContributorProduction cp: c.getContributorProductions()){
             gen.writeStartObject();
             gen.writeObjectField("productionId" , cp.getProduction().getId());
-            gen.writeObjectField("contributorName" , cp.getProduction().getTitle());
+            gen.writeObjectField("productionTitle" , cp.getProduction().getTitle());
             gen.writeObjectField("role" , cp.getRole().toString() );
             gen.writeEndObject();
         }

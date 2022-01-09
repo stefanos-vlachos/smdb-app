@@ -1,7 +1,7 @@
 package com.pfseven.smdb.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.pfseven.smdb.util.MovieSerializer;
+import com.pfseven.smdb.serializer.MovieSerializer;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 

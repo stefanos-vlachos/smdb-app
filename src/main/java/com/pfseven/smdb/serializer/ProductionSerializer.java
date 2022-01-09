@@ -1,4 +1,4 @@
-package com.pfseven.smdb.util;
+package com.pfseven.smdb.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
@@ -6,8 +6,6 @@ import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.pfseven.smdb.domain.ContributorProduction;
 import com.pfseven.smdb.domain.Production;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class  ProductionSerializer<T extends Production> extends StdSerializer<T> {
 

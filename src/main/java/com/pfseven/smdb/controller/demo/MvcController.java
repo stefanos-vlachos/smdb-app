@@ -1,9 +1,11 @@
-package com.pfseven.smdb.controller;
+package com.pfseven.smdb.controller.demo;
 
 import com.pfseven.smdb.domain.Contributor;
 import com.pfseven.smdb.domain.Movie;
+import com.pfseven.smdb.domain.Sitcom;
 import com.pfseven.smdb.service.ContributorService;
 import com.pfseven.smdb.service.MovieService;
+import com.pfseven.smdb.service.SitcomService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,7 @@ import java.util.List;
 public class MvcController {
 
     private MovieService movieService;
+    private SitcomService sitcomService;
     private ContributorService contributorService;
 
     @GetMapping
@@ -39,8 +42,23 @@ public class MvcController {
         return "movieDetails";
     }
 
-    @PostMapping("/search/movie")
-    public String findMovie(Model model ,@Valid @RequestParam("title") String title) {
+    @GetMapping("/allsitcoms")
+    public String showSitcoms(Model model) {
+        final List<Sitcom> allSitcoms = sitcomService.findAll();
+        model.addAttribute("sitcoms", allSitcoms);
+        return "sitcoms";
+    }
+
+    @GetMapping(path = "/sitcomdetails" ,params = {"id"})
+    public String showSitcomDetails(Model model , @RequestParam("id") Long id) {
+        final Sitcom sitcom = sitcomService.find(id);
+        model.addAttribute("sitcom", sitcom);
+        return "sitcomDetails";
+    }
+
+
+    @PostMapping("/search")
+    public String findMovie(Model model ,@Valid @RequestParam("keyword") String title) {
         Movie movie = movieService.findByTitle(title);
         model.addAttribute("movie",movie );
         return "movieDetails";
