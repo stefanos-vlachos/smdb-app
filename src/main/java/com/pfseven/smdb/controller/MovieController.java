@@ -1,9 +1,11 @@
 package com.pfseven.smdb.controller;
 
+import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.service.BaseService;
 import com.pfseven.smdb.service.MovieService;
 import com.pfseven.smdb.transfer.ApiResponse;
+import com.pfseven.smdb.transfer.KeyValue;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +29,16 @@ public class MovieController extends AbstractController<Movie> {
     @GetMapping(params = {"top"})
     public ResponseEntity<ApiResponse<List<Movie>>> findTopXRatedMovies(@RequestParam("top") Integer moviesNum) {
         return ResponseEntity.ok(ApiResponse.<List<Movie>>builder().data(movieService.findTopXRatedMovies(moviesNum)).build());
+    }
+
+    @GetMapping(params = {"g"})
+    public ResponseEntity<ApiResponse<List<Movie>>> findMoviesByGenres(@RequestParam("g") Genre genre) {
+        return ResponseEntity.ok(ApiResponse.<List<Movie>>builder().data(movieService.findMoviesByGenres(genre)).build());
+    }
+
+    @GetMapping(headers = "action=findMoviesPerGenre")
+    public ResponseEntity<ApiResponse<List<KeyValue<Genre, Integer>>>> findMoviesPerGenre() {
+        return ResponseEntity.ok(ApiResponse.<List<KeyValue<Genre, Integer>>>builder().data(movieService.findMoviesPerGenre()).build());
     }
 
     @GetMapping(headers="action=export")
