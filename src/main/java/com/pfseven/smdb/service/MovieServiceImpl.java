@@ -6,6 +6,7 @@ import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.repository.MovieRepository;
 import com.pfseven.smdb.transfer.KeyValue;
+import com.pfseven.smdb.transfer.NumberOfMoviesPerYearAndGenreDto;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -44,6 +45,11 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     @Override
     public  List<KeyValue<Genre,Integer>> findMoviesNumberPerGenre(){
         return movieRepository.findMoviesNumberPerGenre();
+    }
+
+    @Override
+    public List<NumberOfMoviesPerYearAndGenreDto> findMoviesNumberPerGenreAndYear() {
+        return movieRepository.findMoviesNumberPerGenreAndYear();
     }
 
     @Override
