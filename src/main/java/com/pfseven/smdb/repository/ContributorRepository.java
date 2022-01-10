@@ -47,6 +47,4 @@ public interface ContributorRepository extends JpaRepository<Contributor, Long> 
     @Query("select distinct p from Production p join fetch p.contributorProductions cp where cp.contributor.id = ?1 and cp.role = ?2")
     List<Production> findContentOfConributorByRole(Long id, Role role);
 
-    /*@Query("select p, p.genres as genre from Production p join fetch p.contributorProductions cp inner join p.genres genres where cp.contributor.id = ?1 group by genre")
-    List<KeyValue<Genre,List<Production>>> findContentOfContributorByGenre(Long id);*/
 }
