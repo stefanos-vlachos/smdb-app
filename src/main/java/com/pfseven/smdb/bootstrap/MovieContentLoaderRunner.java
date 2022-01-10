@@ -40,7 +40,7 @@ public class MovieContentLoaderRunner extends AbstractLogComponent implements Co
 
             Movie movie = new Movie();
             movie.setTitle((String) object.get("title"));
-            movie.setReleaseYear(new SimpleDateFormat("yyyy").parse((String) object.get("releaseYear")));
+            movie.setReleaseYear(Integer.parseInt((String) object.get("releaseYear")));
             movie.setRating(new BigDecimal((String) object.get("rating")));
             movie.setLanguage((String) object.get("language"));
             movie.setDuration(Integer.parseInt((String) object.get("duration")));

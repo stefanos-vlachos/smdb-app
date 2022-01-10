@@ -40,7 +40,7 @@ public class SitcomsContentLoaderRunner extends AbstractLogComponent implements 
 
             Sitcom sitcom = new Sitcom();
             sitcom.setTitle((String) object.get("title"));
-            sitcom.setReleaseYear(new SimpleDateFormat("yyyy").parse((String) object.get("releaseYear")));
+            sitcom.setReleaseYear(Integer.parseInt((String) object.get("releaseYear")));
             sitcom.setRating(new BigDecimal((String) object.get("rating")));
             sitcom.setLanguage((String) object.get("language"));
             sitcom.setGenres(loadGenres(object));

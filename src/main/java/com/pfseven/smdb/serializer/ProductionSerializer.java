@@ -22,7 +22,7 @@ public abstract class  ProductionSerializer<T extends Production> extends StdSer
 
         gen.writeStartObject();
         gen.writeStringField("title: ",m.getTitle());
-        gen.writeObjectField("release year: ", m.getReleaseYear());
+        gen.writeNumberField("release year: ", m.getReleaseYear());
         gen.writeNumberField("rating: ",m.getRating());
         gen.writeStringField("language: ",m.getLanguage());
         gen.writeObjectField("genres: " , m.getGenres());

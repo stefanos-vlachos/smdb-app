@@ -31,10 +31,9 @@ public class Production extends BaseModel {
     @Column(nullable = false)
     private String title;
 
-    @Temporal(TemporalType.DATE)
     @NotNull(message = "{releaseYear.null}")
     @Column(nullable = false)
-    private Date releaseYear;
+    private Integer releaseYear;
 
     @NotNull(message = "{rating.null}")
     @Column(precision = 4, scale = 2, nullable = false)
