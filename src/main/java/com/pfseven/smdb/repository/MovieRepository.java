@@ -26,7 +26,6 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
             "from Production p inner join p.genres genre where type(p)=Movie group by genre")
     List<KeyValue<Genre,Integer>> findMoviesNumberPerGenre();
 
-
     @Query("select m from Movie m join fetch m.contributorProductions where m.id = ?1")
     Movie findLazy(Long id);
 

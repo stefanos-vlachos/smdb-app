@@ -46,7 +46,6 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
         return movieRepository.findMoviesNumberPerGenre();
     }
 
-
     @Override
     public Movie find(Long id) {
         return findLazy(id);

@@ -25,8 +25,9 @@ public class ContributorSerializer extends StdSerializer<Contributor> {
         gen.writeStartObject();
         gen.writeStringField("fullName: ",c.getFullName());
         gen.writeStringField("Gender: ",c.getGender());
+        gen.writeStringField("Origin: ",c.getOrigin());
 
-        gen.writeArrayFieldStart("contributions: ");
+        gen.writeArrayFieldStart("contributorProductions: ");
         for(ContributorProduction cp: c.getContributorProductions()){
             gen.writeStartObject();
             gen.writeObjectField("productionId" , cp.getProduction().getId());
