@@ -22,10 +22,10 @@
     <p>
         <#list contributor.contributorProductions as contribution>
         <#if contribution.production.class.simpleName == "Movie">
-    <p> <a href = "./moviedetails?id=${contribution.production.id}"> ${contribution.production.title} </a> as ${contribution.role}</p>
+    <p> <a href = "/moviedetails?id=${contribution.production.id}"> ${contribution.production.title} </a> as ${contribution.role}</p>
     </#if>
     <#if contribution.production.class.simpleName == "Sitcom">
-    <p> <a href = "./sitcomdetails?id=${contribution.production.id}"> ${contribution.production.title} </a> as ${contribution.role}</p>
+    <p> <a href = "/sitcomdetails?id=${contribution.production.id}"> ${contribution.production.title} </a> as ${contribution.role}</p>
     </#if>
 
     </#list>

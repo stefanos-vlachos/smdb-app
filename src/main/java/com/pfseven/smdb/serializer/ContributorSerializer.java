@@ -23,14 +23,14 @@ public class ContributorSerializer extends StdSerializer<Contributor> {
 
         gen.writeStartObject();
         gen.writeStringField("fullName: ",c.getFullName());
-        gen.writeStringField("Gender: ",c.getGender());
-        gen.writeStringField("Origin: ",c.getOrigin());
+        gen.writeStringField("gender: ",c.getGender());
+        gen.writeStringField("origin: ",c.getOrigin());
 
         gen.writeArrayFieldStart("contributorProductions: ");
         for(ContributorProduction cp: c.getContributorProductions()){
             gen.writeStartObject();
-            gen.writeObjectField("productionId" , cp.getProduction().getId());
-            gen.writeObjectField("productionTitle" , cp.getProduction().getTitle());
+            gen.writeObjectField("id" , cp.getProduction().getId());
+            gen.writeObjectField("title" , cp.getProduction().getTitle());
             gen.writeObjectField("role" , cp.getRole().toString() );
             gen.writeEndObject();
         }

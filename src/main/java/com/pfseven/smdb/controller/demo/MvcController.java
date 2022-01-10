@@ -1,5 +1,6 @@
 package com.pfseven.smdb.controller.demo;
 
+import com.pfseven.smdb.domain.BaseModel;
 import com.pfseven.smdb.domain.Contributor;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.domain.Sitcom;
@@ -58,10 +59,24 @@ public class MvcController {
 
 
     @PostMapping("/search")
-    public String findMovie(Model model ,@Valid @RequestParam("keyword") String title) {
-        Movie movie = movieService.findByTitle(title);
-        model.addAttribute("movie",movie );
-        return "movieDetails";
+    public String findByKeyword(Model model ,@Valid @RequestParam("keyword") String keyword,@Valid @RequestParam("searchFor") String searchFor) {
+        BaseModel searchElement = null;
+        if(searchFor.equals("movie")) {
+            searchElement = movieService.findByTitle(keyword);
+        }
+        else if (searchFor.equals("sitcom")){
+            searchElement = sitcomService.findByTitle(keyword);
+        }
+        else if((searchFor.equals("contributor"))){
+            searchElement = contributorService.findContributorByFullName(keyword);
+        }
+        if(searchElement==null) {
+            model.addAttribute("content", searchFor);
+            model.addAttribute("keyword", keyword);
+            return "notFound";
+        }
+        model.addAttribute(searchFor,searchElement );
+        return searchFor+"Details";
     }
 
     @GetMapping("/allactors")

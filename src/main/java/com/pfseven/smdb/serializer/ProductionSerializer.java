@@ -22,7 +22,7 @@ public abstract class  ProductionSerializer<T extends Production> extends StdSer
 
         gen.writeStartObject();
         gen.writeStringField("title: ",m.getTitle());
-        gen.writeNumberField("release year: ", m.getReleaseYear());
+        gen.writeNumberField("releaseYear: ", m.getReleaseYear());
         gen.writeNumberField("rating: ",m.getRating());
         gen.writeStringField("language: ",m.getLanguage());
         gen.writeObjectField("genres: " , m.getGenres());
@@ -31,8 +31,8 @@ public abstract class  ProductionSerializer<T extends Production> extends StdSer
         gen.writeArrayFieldStart("contributorProductions: ");
         for(ContributorProduction c: m.getContributorProductions()){
             gen.writeStartObject();
-            gen.writeObjectField("contributorId" , c.getContributor().getId());
-            gen.writeObjectField("contributorName" , c.getContributor().getFullName());
+            gen.writeObjectField("id" , c.getContributor().getId());
+            gen.writeObjectField("fullName" , c.getContributor().getFullName());
             gen.writeObjectField("role" , c.getRole().toString() );
             gen.writeEndObject();
         }
