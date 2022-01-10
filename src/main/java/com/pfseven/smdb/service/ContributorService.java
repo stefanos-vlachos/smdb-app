@@ -1,9 +1,11 @@
 package com.pfseven.smdb.service;
 
 import com.pfseven.smdb.domain.*;
+import com.pfseven.smdb.transfer.KeyValue;
 
 import java.io.Writer;
 import java.util.List;
+import java.util.Map;
 
 public interface ContributorService extends BaseService<Contributor, Long> {
     Contributor findContributorByFullNameAndAndOriginAndGender(String fullName, String origin, String gender);
@@ -31,4 +33,6 @@ public interface ContributorService extends BaseService<Contributor, Long> {
     List<Production> findContentOfContributorByRole (Long id, Role role);
 
     void exportContributorsToCsv(Writer contributorsWriter, Writer contributionsWriter);
+
+    Map<Genre, List<Production>> findContentOfContributorByGenre(Long id);
 }

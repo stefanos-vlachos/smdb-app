@@ -2,6 +2,7 @@ package com.pfseven.smdb.service;
 
 import com.pfseven.smdb.domain.*;
 import com.pfseven.smdb.repository.ContributorRepository;
+import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -10,8 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -113,6 +113,23 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
         }catch (IOException e){
             logger.error("Error while writing CSV", e);
         }
+    }
+
+    @Override
+    public Map<Genre, List<Production>> findContentOfContributorByGenre(Long id) {
+        Map<Genre, List<Production>> output = new HashMap<Genre, List<Production>>();
+        List<Production> prods = contributorRepository.findContentOfConributor(id);
+        for(Production p: prods){
+            for(Genre g: p.getGenres()){
+                if(output.get(g)==null){
+                    output.put(g,new ArrayList<Production>(Arrays.asList(p)));
+                }
+                else{
+                    output.get(g).add(p);
+                }
+            }
+        }
+        return output;
     }
 
 }

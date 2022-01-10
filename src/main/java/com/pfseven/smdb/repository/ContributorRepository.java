@@ -1,19 +1,24 @@
 package com.pfseven.smdb.repository;
 
 import com.pfseven.smdb.domain.*;
+import com.pfseven.smdb.transfer.KeyValue;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public interface ContributorRepository extends JpaRepository<Contributor, Long> {
-    Contributor findContributorByFullNameAndAndOriginAndGender(String fullName, String origin, String gender);
-    Contributor findContributorByFullName(String fullName);
-    Boolean existsContributorByFullName(String fullName);
-    Boolean existsByFullName(Contributor contributor);
 
+    Contributor findContributorByFullNameAndAndOriginAndGender(String fullName, String origin, String gender);
+
+    Contributor findContributorByFullName(String fullName);
+
+    Boolean existsContributorByFullName(String fullName);
+
+    Boolean existsByFullName(Contributor contributor);
 
     @Query("select c from Contributor c join fetch c.contributorProductions where c.id = ?1")
     Contributor findLazy(Long id);
@@ -41,4 +46,7 @@ public interface ContributorRepository extends JpaRepository<Contributor, Long> 
 
     @Query("select distinct p from Production p join fetch p.contributorProductions cp where cp.contributor.id = ?1 and cp.role = ?2")
     List<Production> findContentOfConributorByRole(Long id, Role role);
+
+    /*@Query("select p, p.genres as genre from Production p join fetch p.contributorProductions cp inner join p.genres genres where cp.contributor.id = ?1 group by genre")
+    List<KeyValue<Genre,List<Production>>> findContentOfContributorByGenre(Long id);*/
 }

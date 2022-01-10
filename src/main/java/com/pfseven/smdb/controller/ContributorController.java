@@ -4,6 +4,7 @@ import com.pfseven.smdb.domain.*;
 import com.pfseven.smdb.service.BaseService;
 import com.pfseven.smdb.service.ContributorService;
 import com.pfseven.smdb.transfer.ApiResponse;
+import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @RequiredArgsConstructor
 @RestController
@@ -55,6 +57,11 @@ public class ContributorController extends AbstractController<Contributor>{
     @GetMapping(headers = "action=getContent", params = {"id, role"})
     public ResponseEntity<ApiResponse<List<Production>>> findContentOfContributorByRole(@RequestParam("id") Long id, @RequestParam("role") String role) {
         return ResponseEntity.ok(ApiResponse.<List<Production>>builder().data(contributorService.findContentOfContributorByRole(id, Role.roleCompare(role))).build());
+    }
+
+    @GetMapping(headers = "action=getContentByGenre", params = {"id"})
+    public ResponseEntity<ApiResponse<Map<Genre, List<Production>>>> findContentOfContributorByGenre(@RequestParam("id") Long id) {
+        return ResponseEntity.ok(ApiResponse.<Map<Genre, List<Production>>>builder().data(contributorService.findContentOfContributorByGenre(id)).build());
     }
 
     @GetMapping(headers="action=export")
