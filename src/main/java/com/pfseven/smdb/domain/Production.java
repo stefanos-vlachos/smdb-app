@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
@@ -19,7 +18,6 @@ import java.util.Set;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Entity()
 @Table(name = "PRODUCTIONS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "PRODUCTIONS_SEQ", initialValue = 1, allocationSize = 1)

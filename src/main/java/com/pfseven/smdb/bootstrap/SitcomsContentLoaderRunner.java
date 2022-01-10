@@ -4,7 +4,6 @@ import com.pfseven.smdb.base.AbstractLogComponent;
 import com.pfseven.smdb.domain.*;
 import com.pfseven.smdb.service.ContributorService;
 import com.pfseven.smdb.service.SitcomService;
-import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -13,10 +12,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
-
 import java.io.FileReader;
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Component
@@ -74,15 +71,12 @@ public class SitcomsContentLoaderRunner extends AbstractLogComponent implements 
                 contributorProduction.setRole(Role.roleCompare((String)contributorObject.get("role")));
 
 
- //               contributors.get(contributor.getFullName()).addContribution(contributorProduction);
                 sitcoms.get(sitcom.getTitle()).addContribution(contributorProduction);
             }
         }
         sitcomService.createAll(new ArrayList<Sitcom>(sitcoms.values()));
         contributorService.createAll(new ArrayList<Contributor>(contributors.values()));
 
-        /*List<Sitcom> s = sitcomService.findSitcomsByGenre(Genre.valueOf("COMEDY"));
-        List<KeyValue<Genre,Integer>> s1 = sitcomService.findSitcomsPerGenre();*/
     }
 
     private Set<Genre> loadGenres(JSONObject object){

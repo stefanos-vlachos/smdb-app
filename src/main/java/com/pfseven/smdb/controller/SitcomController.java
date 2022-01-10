@@ -2,7 +2,6 @@ package com.pfseven.smdb.controller;
 
 
 import com.pfseven.smdb.domain.Genre;
-import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.domain.Sitcom;
 import com.pfseven.smdb.service.BaseService;
 import com.pfseven.smdb.service.SitcomService;
@@ -14,10 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.io.FileWriter;
 import java.io.IOException;
-import java.security.Key;
 import java.util.List;
 
 

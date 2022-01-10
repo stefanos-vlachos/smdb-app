@@ -2,7 +2,6 @@ package com.pfseven.smdb.service;
 
 import com.pfseven.smdb.domain.ContributorProduction;
 import com.pfseven.smdb.domain.Genre;
-import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.domain.Sitcom;
 import com.pfseven.smdb.repository.SitcomRepository;
 import com.pfseven.smdb.transfer.KeyValue;
@@ -11,7 +10,6 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
@@ -45,7 +43,6 @@ public class SitcomServiceImpl extends BaseServiceImpl<Sitcom> implements Sitcom
     public List<KeyValue<Genre,Integer>> findSitcomsNumberPerGenre(){
         return sitcomRepository.findSitcomsNumberPerGenre();
     }
-
 
     @Override
     public Sitcom find(Long id) {

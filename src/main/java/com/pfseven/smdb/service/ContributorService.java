@@ -1,8 +1,6 @@
 package com.pfseven.smdb.service;
 
 import com.pfseven.smdb.domain.*;
-import com.pfseven.smdb.transfer.KeyValue;
-
 import java.io.Writer;
 import java.util.List;
 import java.util.Map;

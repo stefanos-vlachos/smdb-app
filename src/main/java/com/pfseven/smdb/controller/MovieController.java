@@ -10,7 +10,6 @@ import com.pfseven.smdb.transfer.NumberOfMoviesPerYearAndGenreDto;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;

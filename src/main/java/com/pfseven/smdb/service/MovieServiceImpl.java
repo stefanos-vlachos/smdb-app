@@ -1,6 +1,5 @@
 package com.pfseven.smdb.service;
 
-import com.pfseven.smdb.domain.Contributor;
 import com.pfseven.smdb.domain.ContributorProduction;
 import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
@@ -12,7 +11,6 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;

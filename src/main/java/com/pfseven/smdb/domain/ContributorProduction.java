@@ -2,7 +2,6 @@ package com.pfseven.smdb.domain;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-
 import javax.persistence.*;
 
 @Data

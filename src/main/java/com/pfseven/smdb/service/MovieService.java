@@ -1,11 +1,9 @@
 package com.pfseven.smdb.service;
 
-import com.pfseven.smdb.domain.Contributor;
 import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.transfer.KeyValue;
 import com.pfseven.smdb.transfer.NumberOfMoviesPerYearAndGenreDto;
-
 import java.io.Writer;
 import java.util.List;
 

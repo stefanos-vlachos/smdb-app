@@ -1,6 +1,5 @@
 package com.pfseven.smdb.repository;
 
-import com.pfseven.smdb.domain.Contributor;
 import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.transfer.KeyValue;

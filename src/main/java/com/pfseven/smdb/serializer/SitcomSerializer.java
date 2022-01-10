@@ -22,6 +22,5 @@ public class SitcomSerializer extends  ProductionSerializer<Sitcom>  {
         gen.writeNumberField("episodes: ", s.getEpisodes());
         gen.writeEndObject();
     }
-
 }
 

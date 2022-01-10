@@ -3,7 +3,6 @@ package com.pfseven.smdb.service;
 import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Sitcom;
 import com.pfseven.smdb.transfer.KeyValue;
-
 import java.io.Writer;
 import java.util.List;
 

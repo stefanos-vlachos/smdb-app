@@ -4,7 +4,6 @@ import com.pfseven.smdb.base.AbstractLogComponent;
 import com.pfseven.smdb.domain.*;
 import com.pfseven.smdb.service.ContributorService;
 import com.pfseven.smdb.service.MovieService;
-import com.pfseven.smdb.transfer.KeyValue;
 import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -13,10 +12,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
-
 import java.io.FileReader;
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Component
@@ -72,16 +69,12 @@ public class MovieContentLoaderRunner extends AbstractLogComponent implements Co
                 contributorProduction.setContributor(contributor);
                 contributorProduction.setRole(Role.roleCompare((String)contributorObject.get("role")));
 
-
-    //            contributors.get(contributor.getFullName()).addContribution(contributorProduction);
                 movies.get(movie.getTitle()).addContribution(contributorProduction);
             }
         }
         movieService.createAll(new ArrayList<Movie>(movies.values()));
         contributorService.createAll(new ArrayList<Contributor>(contributors.values()));
 
-        /*List<Movie> m1 = movieService.findMoviesByGenre(Genre.valueOf("DRAMA"));
-        List<KeyValue<Genre,Integer>> m2 = movieService.findMoviesPerGenre();*/
     }
 
     private Set<Genre> loadGenres(JSONObject object){

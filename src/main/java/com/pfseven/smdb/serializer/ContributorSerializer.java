@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.pfseven.smdb.domain.Contributor;
 import com.pfseven.smdb.domain.ContributorProduction;
 import java.io.IOException;
-import java.util.Locale;
 
 public class ContributorSerializer extends StdSerializer<Contributor> {
 

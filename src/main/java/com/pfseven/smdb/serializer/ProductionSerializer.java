@@ -28,7 +28,6 @@ public abstract class  ProductionSerializer<T extends Production> extends StdSer
         gen.writeObjectField("genres: " , m.getGenres());
         gen.writeStringField("resume: " , m.getResume());
 
-
         gen.writeArrayFieldStart("contributorProductions: ");
         for(ContributorProduction c: m.getContributorProductions()){
             gen.writeStartObject();

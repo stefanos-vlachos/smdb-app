@@ -4,8 +4,6 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.pfseven.smdb.domain.Movie;
 import java.io.IOException;
 
-
-
 public class MovieSerializer extends ProductionSerializer<Movie> {
 
     public MovieSerializer() {
