@@ -21,6 +21,7 @@ public abstract class  ProductionSerializer<T extends Production> extends StdSer
             throws IOException {
 
         gen.writeStartObject();
+        gen.writeObjectField("id: ",m.getId());
         gen.writeStringField("title: ",m.getTitle());
         gen.writeNumberField("releaseYear: ", m.getReleaseYear());
         gen.writeNumberField("rating: ",m.getRating());

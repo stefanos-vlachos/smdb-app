@@ -2,6 +2,7 @@ package com.pfseven.smdb.controller;
 
 
 import com.pfseven.smdb.domain.Genre;
+import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.domain.Sitcom;
 import com.pfseven.smdb.service.BaseService;
 import com.pfseven.smdb.service.SitcomService;
@@ -28,6 +29,11 @@ public class SitcomController extends AbstractController<Sitcom> {
     @Override
     protected BaseService<Sitcom, Long> getBaseService() {
         return sitcomService;
+    }
+
+    @GetMapping(params = {"title"})
+    public ResponseEntity<ApiResponse<Sitcom>> findByTitle(@RequestParam("title") String title) {
+        return ResponseEntity.ok(ApiResponse.<Sitcom>builder().data(sitcomService.findByTitle(title)).build());
     }
 
     @GetMapping(params = {"top"})

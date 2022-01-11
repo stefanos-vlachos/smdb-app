@@ -22,6 +22,7 @@ public class ContributorSerializer extends StdSerializer<Contributor> {
             throws IOException {
 
         gen.writeStartObject();
+        gen.writeObjectField("id: ",c.getId());
         gen.writeStringField("fullName: ",c.getFullName());
         gen.writeStringField("gender: ",c.getGender());
         gen.writeStringField("origin: ",c.getOrigin());

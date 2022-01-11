@@ -22,8 +22,8 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
     }
 
     @Override
-    public Contributor findContributorByFullNameAndAndOriginAndGender(String fullName, String origin, String gender) {
-        return contributorRepository.findContributorByFullNameAndAndOriginAndGender(fullName, origin, gender);
+    public Contributor findContributorByFullNameAndOriginAndGender(String fullName, String origin, String gender) {
+        return contributorRepository.findContributorByFullNameAndOriginAndGender(fullName, origin, gender);
     }
 
     @Override

@@ -26,6 +26,11 @@ public class MovieController extends AbstractController<Movie> {
         return movieService;
     }
 
+    @GetMapping(params = {"title"})
+    public ResponseEntity<ApiResponse<Movie>> findByTitle(@RequestParam("title") String title) {
+        return ResponseEntity.ok(ApiResponse.<Movie>builder().data(movieService.findByTitle(title)).build());
+    }
+
     @GetMapping(params = {"top"})
     public ResponseEntity<ApiResponse<List<Movie>>> findTopXRatedMovies(@RequestParam("top") Integer moviesNum) {
         return ResponseEntity.ok(ApiResponse.<List<Movie>>builder().data(movieService.findTopXRatedMovies(moviesNum)).build());

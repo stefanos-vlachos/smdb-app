@@ -9,7 +9,8 @@ import java.util.List;
 @Repository
 public interface ContributorRepository extends JpaRepository<Contributor, Long> {
 
-    Contributor findContributorByFullNameAndAndOriginAndGender(String fullName, String origin, String gender);
+    @Query("select c from Contributor c join fetch c.contributorProductions where c.fullName = ?1 AND c.origin = ?2 AND c.gender = ?3 ")
+    Contributor findContributorByFullNameAndOriginAndGender(String fullName, String origin, String gender);
 
     @Query("select c from Contributor c join fetch c.contributorProductions where c.fullName = ?1")
     Contributor findContributorByFullName(String fullName);

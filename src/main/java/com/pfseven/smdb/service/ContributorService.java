@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface ContributorService extends BaseService<Contributor, Long> {
-    Contributor findContributorByFullNameAndAndOriginAndGender(String fullName, String origin, String gender);
+    Contributor findContributorByFullNameAndOriginAndGender(String fullName, String origin, String gender);
 
     Contributor findContributorByFullName(String fullName);
 
