@@ -22,7 +22,7 @@ public class CustomizedExceptionHandler extends AbstractLogComponent {
 
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<ApiResponse<?>> handleAllExceptions(final Exception ex, final WebRequest request) {
-        logger.error("Unexpected exception occurred.", ex);
+        logger.error("500 Internal Server Error: Unexpected exception occurred.", ex);
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.INTERNAL_SERVER_ERROR, request)).build(),
                 HttpStatus.INTERNAL_SERVER_ERROR);
@@ -31,16 +31,16 @@ public class CustomizedExceptionHandler extends AbstractLogComponent {
     @ExceptionHandler(NoSuchElementException.class)
     public final ResponseEntity<ApiResponse<?>> handleNonExistence(final NoSuchElementException ex,
                                                                    final WebRequest request) {
-        logger.error("Reference to a non-existent object.", ex);
+        logger.error("404 Not Found: Reference to a non-existent object.", ex);
         return new ResponseEntity<>(ApiResponse.builder().apiError(
-                getApiError(ex, HttpStatus.NOT_FOUND, request, "Reference to a non-existent object.")).build(),
+                getApiError(ex, HttpStatus.NOT_FOUND, request, "404 Not Found: Reference to a non-existent object.")).build(),
                 HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(DataAccessException.class)
     public final ResponseEntity<ApiResponse<?>> handleDataErrors(final DataAccessException ex,
                                                                  final WebRequest request) {
-        logger.error("There was something wrong while interacting with the associated database.", ex);
+        logger.error("406 Not Acceptable: There was something wrong while interacting with the associated database.", ex);
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.NOT_ACCEPTABLE, request)).build(),
                 HttpStatus.NOT_ACCEPTABLE);
@@ -49,7 +49,7 @@ public class CustomizedExceptionHandler extends AbstractLogComponent {
     @ExceptionHandler(DataIntegrityViolationException.class)
     public final ResponseEntity<ApiResponse<?>> handleDataConstraintErrors(final DataIntegrityViolationException ex,
                                                                            final WebRequest request) {
-        var customMessage = "There was a conflict while interacting with the associated database. Make sure the " +
+        var customMessage = "406 Not Acceptable: There was a conflict while interacting with the associated database. Make sure the " +
                 "data submitted does not include already existing values in fields such as ids and serial numbers.";
         logger.error("{}", customMessage, ex);
 
@@ -61,7 +61,7 @@ public class CustomizedExceptionHandler extends AbstractLogComponent {
     @ExceptionHandler(MissingServletRequestParameterException.class)
     protected ResponseEntity<ApiResponse<?>> handleMissingServletRequestParameter(
             final MissingServletRequestParameterException ex, final WebRequest request) {
-        logger.error("There was a parameter missing from incoming request", ex);
+        logger.error("404 Bad Request: There was a parameter missing from incoming request.", ex);
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.BAD_REQUEST, request)).build(),
                 HttpStatus.BAD_REQUEST);
@@ -70,7 +70,7 @@ public class CustomizedExceptionHandler extends AbstractLogComponent {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     protected ResponseEntity<ApiResponse<?>> handleMethodArgumentNotValid(final MethodArgumentNotValidException ex,
                                                                           final WebRequest request) {
-        logger.error("Method argument is invalid.", ex);
+        logger.error("404 Bad Request: Method argument is invalid.", ex);
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.BAD_REQUEST, request)).build(),
                 HttpStatus.BAD_REQUEST);
@@ -79,7 +79,7 @@ public class CustomizedExceptionHandler extends AbstractLogComponent {
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<ApiResponse<?>> handleMethodArgumentTypeMismatch(final MethodArgumentTypeMismatchException ex,
                                                                            final WebRequest request) {
-        logger.error("Method argument, although matched, is of wrong type.", ex);
+        logger.error("404 Bad Request: Method argument, although matched, is of wrong type.", ex);
         return new ResponseEntity<>(
                 ApiResponse.builder().apiError(getApiError(ex, HttpStatus.BAD_REQUEST, request)).build(),
                 HttpStatus.BAD_REQUEST);

@@ -63,13 +63,13 @@ public abstract class BaseServiceImpl<T extends BaseModel> extends AbstractLogCo
 
     @Override
     public T find(Long id) {
-        logger.trace("Retrieve data by id={}", id);
+        logger.trace("Retrieving data by id={}.", id);
         return getRepository().findById(id).orElseThrow(NoSuchElementException::new);
     }
 
     @Override
     public List<T> findAll() {
-        logger.trace("Retrieve all data");
+        logger.trace("Retrieving all data.");
         return getRepository().findAll();
     }
 }

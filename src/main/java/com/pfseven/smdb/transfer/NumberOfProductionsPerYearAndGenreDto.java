@@ -2,10 +2,10 @@ package com.pfseven.smdb.transfer;
 
 import com.pfseven.smdb.domain.Genre;
 
-public interface NumberOfMoviesPerYearAndGenreDto {
+public interface NumberOfProductionsPerYearAndGenreDto {
     Integer getReleaseYear();
 
     Genre getGenre();
 
-    Integer getNumberOfMovies();
+    Integer getNumberOfProductions();
 }

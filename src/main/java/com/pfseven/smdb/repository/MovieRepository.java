@@ -3,7 +3,7 @@ package com.pfseven.smdb.repository;
 import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.transfer.KeyValue;
-import com.pfseven.smdb.transfer.NumberOfMoviesPerYearAndGenreDto;
+import com.pfseven.smdb.transfer.NumberOfProductionsPerYearAndGenreDto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -26,9 +26,9 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
             "from Production p inner join p.genres genre where type(p)=Movie group by genre")
     List<KeyValue<Genre,Integer>> findMoviesNumberPerGenre();
 
-    @Query("select m.releaseYear as releaseYear, genres as genre, count(m.id) as numberOfMovies " +
+    @Query("select m.releaseYear as releaseYear, genres as genre, count(m.id) as numberOfProductions " +
             "from Movie m inner join m.genres genres group by genre, releaseYear")
-    List<NumberOfMoviesPerYearAndGenreDto> findMoviesNumberPerGenreAndYear();
+    List<NumberOfProductionsPerYearAndGenreDto> findMoviesNumberPerGenreAndYear();
 
     @Query("select m from Movie m join fetch m.contributorProductions where m.id = ?1")
     Movie findLazy(Long id);

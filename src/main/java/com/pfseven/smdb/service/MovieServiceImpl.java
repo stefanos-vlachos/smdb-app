@@ -5,7 +5,7 @@ import com.pfseven.smdb.domain.Genre;
 import com.pfseven.smdb.domain.Movie;
 import com.pfseven.smdb.repository.MovieRepository;
 import com.pfseven.smdb.transfer.KeyValue;
-import com.pfseven.smdb.transfer.NumberOfMoviesPerYearAndGenreDto;
+import com.pfseven.smdb.transfer.NumberOfProductionsPerYearAndGenreDto;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -27,27 +27,42 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
 
     @Override
     public Movie findByTitle(String title) {
-        return movieRepository.findByTitle(title);
+        Movie m = movieRepository.findByTitle(title);
+        if(m!=null)
+            logger.info("Found movie with title:{}.", m.getTitle());
+        return m;
     }
 
     @Override
     public List<Movie> findTopXRatedMovies(Integer moviesNum){
-        return movieRepository.orderMoviesByRating().subList(0,moviesNum);
+        List<Movie> m = movieRepository.orderMoviesByRating().subList(0,moviesNum);
+        if(!m.isEmpty())
+            logger.info("Found {} top rated movies.", moviesNum);
+        return m;
     }
 
     @Override
     public List<Movie> findMoviesByGenre(Genre genre){
-        return  movieRepository.findMoviesByGenre(genre);
+        List<Movie> m = movieRepository.findMoviesByGenre(genre);
+        if(!m.isEmpty())
+            logger.info("Found all movies related to genre: {}.",genre.toString());
+        return  m;
     }
 
     @Override
     public  List<KeyValue<Genre,Integer>> findMoviesNumberPerGenre(){
-        return movieRepository.findMoviesNumberPerGenre();
+        List<KeyValue<Genre,Integer>> m = movieRepository.findMoviesNumberPerGenre();
+        if(!m.isEmpty())
+            logger.info("Found number of movies per movie genre.");
+        return m;
     }
 
     @Override
-    public List<NumberOfMoviesPerYearAndGenreDto> findMoviesNumberPerGenreAndYear() {
-        return movieRepository.findMoviesNumberPerGenreAndYear();
+    public List<NumberOfProductionsPerYearAndGenreDto> findMoviesNumberPerGenreAndYear() {
+        List<NumberOfProductionsPerYearAndGenreDto> m = movieRepository.findMoviesNumberPerGenreAndYear();
+        if(!m.isEmpty())
+            logger.info("Found number of movies per genre and release year.");
+        return m;
     }
 
     @Override
@@ -57,7 +72,10 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
 
     @Override
     public Movie findLazy(Long id) {
-        return movieRepository.findLazy(id);
+        Movie m = movieRepository.findLazy(id);
+        if(m!=null)
+            logger.info("Found movie {} with id: {}.", m.getTitle(), m.getId());
+        return m;
     }
 
     @Override
@@ -67,7 +85,10 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
 
     @Override
     public List<Movie> findAllLazy() {
-        return movieRepository.findAllLazy();
+        List<Movie> m = movieRepository.findAllLazy();
+        if(!m.isEmpty())
+            logger.info("Found and returned all movies data saved in the database.");
+        return m;
     }
 
     @Override
@@ -88,9 +109,9 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
                     contributionsCsvPrinter.printRecord(movie.getId(), movie.getTitle(), cp.getContributor().getId(), cp.getContributor().getFullName(), cp.getRole());
                 }
             }
+            logger.info("Exported all movies data to CSV file.");
         }catch (IOException e){
-            logger.error("Error while writing CSV", e);
+            logger.error("Error while writing movies data to CSV file.", e);
         }
     }
-
 }

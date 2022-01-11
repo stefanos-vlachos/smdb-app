@@ -6,7 +6,7 @@ import com.pfseven.smdb.service.BaseService;
 import com.pfseven.smdb.service.MovieService;
 import com.pfseven.smdb.transfer.ApiResponse;
 import com.pfseven.smdb.transfer.KeyValue;
-import com.pfseven.smdb.transfer.NumberOfMoviesPerYearAndGenreDto;
+import com.pfseven.smdb.transfer.NumberOfProductionsPerYearAndGenreDto;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -47,8 +47,8 @@ public class MovieController extends AbstractController<Movie> {
     }
 
     @GetMapping(headers = "action=findMoviesNumberPerGenreAndYear")
-    public ResponseEntity<ApiResponse<List<NumberOfMoviesPerYearAndGenreDto>>> findMoviesNumberPerGenreAndYear() {
-        return ResponseEntity.ok(ApiResponse.<List<NumberOfMoviesPerYearAndGenreDto>>builder().data(movieService.findMoviesNumberPerGenreAndYear()).build());
+    public ResponseEntity<ApiResponse<List<NumberOfProductionsPerYearAndGenreDto>>> findMoviesNumberPerGenreAndYear() {
+        return ResponseEntity.ok(ApiResponse.<List<NumberOfProductionsPerYearAndGenreDto>>builder().data(movieService.findMoviesNumberPerGenreAndYear()).build());
     }
 
     @GetMapping(headers="action=export")

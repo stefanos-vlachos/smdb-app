@@ -80,7 +80,10 @@ public class MovieContentLoaderRunner extends AbstractLogComponent implements Co
             }
         }
         movieService.createAll(new ArrayList<Movie>(movies.values()));
+        logger.info("Inserted initial movies to database successfully.");
         contributorService.createAll(new ArrayList<Contributor>(contributors.values()));
+        logger.info("Inserted contributors of initial movies to database successfully.");
+
     }
 
     private Set<Genre> loadGenres(JSONObject object){
