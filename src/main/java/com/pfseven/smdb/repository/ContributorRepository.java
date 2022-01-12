@@ -9,10 +9,10 @@ import java.util.List;
 @Repository
 public interface ContributorRepository extends JpaRepository<Contributor, Long> {
 
-    @Query("select c from Contributor c join fetch c.contributorProductions where c.fullName = ?1 AND c.origin = ?2 AND c.gender = ?3 ")
+    @Query("select c from Contributor c join fetch c.contributorProductions where upper(c.fullName) = upper(?1) AND upper(c.origin) = upper(?2) AND upper(c.gender) = upper(?3) ")
     Contributor findContributorByFullNameAndOriginAndGender(String fullName, String origin, String gender);
 
-    @Query("select c from Contributor c join fetch c.contributorProductions where c.fullName = ?1")
+    @Query("select c from Contributor c join fetch c.contributorProductions where upper(c.fullName) = upper(?1)")
     Contributor findContributorByFullName(String fullName);
 
     @Query("select c from Contributor c join fetch c.contributorProductions where c.id = ?1")
@@ -37,9 +37,9 @@ public interface ContributorRepository extends JpaRepository<Contributor, Long> 
     List<Sitcom> findSitcomsOfContributorByRole(Long id, Role role);
 
     @Query("select distinct p from Production p join fetch p.contributorProductions cp where cp.contributor.id = ?1")
-    List<Production> findContentOfConributor(Long id);
+    List<Production> findContentOfContributor(Long id);
 
     @Query("select distinct p from Production p join fetch p.contributorProductions cp where cp.contributor.id = ?1 and cp.role = ?2")
-    List<Production> findContentOfConributorByRole(Long id, Role role);
+    List<Production> findContentOfContributorByRole(Long id, Role role);
 
 }

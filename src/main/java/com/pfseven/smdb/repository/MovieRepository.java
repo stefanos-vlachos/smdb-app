@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 
-    @Query("select m from Movie m join fetch m.contributorProductions where m.title = ?1")
+    @Query("select m from Movie m join fetch m.contributorProductions where upper(m.title) = upper(?1)")
     Movie findByTitle(String title);
 
     @Query("select distinct m from Movie m join fetch m.contributorProductions order by m.rating desc")

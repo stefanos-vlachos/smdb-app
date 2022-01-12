@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface SitcomRepository extends JpaRepository<Sitcom, Long> {
 
-    @Query("select s from Sitcom s join fetch s.contributorProductions where s.title = ?1")
+    @Query("select s from Sitcom s join fetch s.contributorProductions where upper(s.title) = upper(?1)")
     Sitcom findByTitle(String title);
 
     @Query("select new com.pfseven.smdb.transfer.KeyValue(genre, count(p.id) )" +

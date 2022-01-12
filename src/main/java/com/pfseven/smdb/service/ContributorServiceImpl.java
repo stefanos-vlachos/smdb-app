@@ -105,7 +105,7 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
 
     @Override
     public List<Production> findContentOfContributor(Long id) {
-        List<Production> p = contributorRepository.findContentOfConributor(id);
+        List<Production> p = contributorRepository.findContentOfContributor(id);
         if(!p.isEmpty())
             logger.info("Found all productions that contributor with id:{} has participated in.", id);
         return p;
@@ -113,7 +113,7 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
 
     @Override
     public List<Production> findContentOfContributorByRole(Long id, Role role) {
-        List<Production> p = contributorRepository.findContentOfConributorByRole(id, role);
+        List<Production> p = contributorRepository.findContentOfContributorByRole(id, role);
         if(!p.isEmpty())
             logger.info("Found all productions in which contributor with id:{} has been {}.", id, role.toString());
         return p;
@@ -145,7 +145,7 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
     @Override
     public Map<Genre, List<Production>> findContentOfContributorByGenre(Long id) {
         Map<Genre, List<Production>> output = new HashMap<>();
-        List<Production> prods = contributorRepository.findContentOfConributor(id);
+        List<Production> prods = contributorRepository.findContentOfContributor(id);
         for(Production p: prods){
             for(Genre g: p.getGenres()){
                 if(output.get(g)==null){
