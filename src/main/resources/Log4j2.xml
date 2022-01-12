@@ -28,6 +28,22 @@
             </DefaultRolloverStrategy>
         </RollingRandomAccessFile>
 
+        <RollingRandomAccessFile name="ServicesAppender"
+                                 fileName="logs/smdb-services.log"
+                                 filePattern="logs/smdb-services-%d{yyyy-MM-dd}.zip">
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="logs">
+                    <IfLastModified age="30d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingRandomAccessFile>
+
         <!-- Rolling Random Access File Appender with a default buffer of 256 * 1024 bytes -->
         <RollingRandomAccessFile name="DataAppender"
                                  fileName="logs/java-path-spring-data.log"
@@ -47,9 +63,18 @@
     </Appenders>
 
     <Loggers>
-        <AsyncLogger name="com.pfseven.smdb" level="trace" additivity="false">
+        <AsyncLogger name="com.pfseven.smdb" level="info" additivity="false">
             <AppenderRef ref="ConsoleAppender"/>
             <AppenderRef ref="DefaultAppender"/>
+        </AsyncLogger>
+        <AsyncLogger name="com.pfseven.smdb.bootstrap" level="info" additivity="false">
+            <AppenderRef ref="ServicesAppender"/>
+        </AsyncLogger>
+        <AsyncLogger name="com.pfseven.smdb.service" level="info" additivity="false">
+            <AppenderRef ref="ServicesAppender"/>
+        </AsyncLogger>
+        <AsyncLogger name="com.pfseven.smdb.controller" level="info" additivity="false">
+            <AppenderRef ref="ServicesAppender"/>
         </AsyncLogger>
         <AsyncLogger name="org.springframework.web" level="debug" additivity="false">
             <AppenderRef ref="ConsoleAppender"/>

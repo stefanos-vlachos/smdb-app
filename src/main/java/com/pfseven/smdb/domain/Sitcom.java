@@ -1,8 +1,9 @@
 package com.pfseven.smdb.domain;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.pfseven.smdb.serializer.SitcomSerializer;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.SequenceGenerator;
@@ -14,10 +15,10 @@ import javax.validation.constraints.NotNull;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Entity()
 @Table(name = "SITCOMS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "SITCOMS_SEQ", initialValue = 1, allocationSize = 1)
+@JsonSerialize(using = SitcomSerializer.class)
 public class Sitcom extends Production {
 
     @NotNull(message = "{seasons.null}")

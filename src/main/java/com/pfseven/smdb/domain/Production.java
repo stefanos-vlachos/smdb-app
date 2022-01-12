@@ -1,9 +1,11 @@
 package com.pfseven.smdb.domain;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
@@ -16,7 +18,6 @@ import java.util.Set;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Entity()
 @Table(name = "PRODUCTIONS")
 @SequenceGenerator(name = "idGenerator", sequenceName = "PRODUCTIONS_SEQ", initialValue = 1, allocationSize = 1)
@@ -28,10 +29,9 @@ public class Production extends BaseModel {
     @Column(nullable = false)
     private String title;
 
-    @Temporal(TemporalType.DATE)
     @NotNull(message = "{releaseYear.null}")
     @Column(nullable = false)
-    private Date releaseYear;
+    private Integer releaseYear;
 
     @NotNull(message = "{rating.null}")
     @Column(precision = 4, scale = 2, nullable = false)
@@ -43,7 +43,7 @@ public class Production extends BaseModel {
     private String language;
 
     @Enumerated(EnumType.STRING)
-    @ElementCollection(targetClass = Genre.class, fetch = FetchType.EAGER)
+    @ElementCollection(targetClass = Genre.class , fetch = FetchType.EAGER)
     @CollectionTable(name = "PRODUCTION_GENRES")
     private Set<Genre> genres;
 
@@ -51,7 +51,7 @@ public class Production extends BaseModel {
     @Column(length = 2048, nullable = false)
     private String resume;
 
-    @OneToMany(mappedBy = "production", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "production", cascade = {CascadeType.PERSIST,CascadeType.MERGE}, orphanRemoval = true, fetch = FetchType.LAZY)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<ContributorProduction> contributorProductions = new HashSet<>();

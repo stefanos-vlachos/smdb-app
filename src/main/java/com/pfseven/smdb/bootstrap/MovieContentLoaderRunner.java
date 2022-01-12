@@ -12,10 +12,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
-
 import java.io.FileReader;
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Component
@@ -30,16 +28,18 @@ public class MovieContentLoaderRunner extends AbstractLogComponent implements Co
 
     @Override
     public void run(String... args) throws Exception {
+
         JSONParser parser = new JSONParser();
         JSONObject fileObject = (JSONObject) parser.parse(new FileReader(ResourceUtils.getFile("classpath:movies.json")));
         JSONArray moviesArray = (JSONArray) fileObject.get("movies");
         Iterator<JSONObject> moviesIterator = moviesArray.iterator();
+
         while (moviesIterator.hasNext()) {
             JSONObject object = moviesIterator.next();
 
             Movie movie = new Movie();
             movie.setTitle((String) object.get("title"));
-            movie.setReleaseYear(new SimpleDateFormat("yyyy").parse((String) object.get("releaseYear")));
+            movie.setReleaseYear(Integer.parseInt((String) object.get("releaseYear")));
             movie.setRating(new BigDecimal((String) object.get("rating")));
             movie.setLanguage((String) object.get("language"));
             movie.setDuration(Integer.parseInt((String) object.get("duration")));
@@ -51,33 +51,38 @@ public class MovieContentLoaderRunner extends AbstractLogComponent implements Co
             Iterator<JSONObject> contributorsIterator = contributorsArray.iterator();
 
             while (contributorsIterator.hasNext()) {
-
                 JSONObject contributorObject = contributorsIterator.next();
 
-                Contributor contributor = null;
-
-                if(!contributors.containsKey((String) contributorObject.get("fullName"))) {
-                    contributor=new Contributor();
-                    contributor.setFullName((String) contributorObject.get("fullName"));
-                    contributor.setGender((String) contributorObject.get("gender"));
-                    contributor.setOrigin((String) contributorObject.get("origin"));
-                    contributors.put(contributor.getFullName(), contributor);
+                Contributor contributor = contributorService.findContributorByFullName((String) contributorObject.get("fullName"));
+                if(contributor == null){
+                    if(!contributors.containsKey((String) contributorObject.get("fullName"))){
+                        contributor=new Contributor();
+                        contributor.setFullName((String) contributorObject.get("fullName"));
+                        contributor.setGender((String) contributorObject.get("gender"));
+                        contributor.setOrigin((String) contributorObject.get("origin"));
+                        contributors.put(contributor.getFullName(), contributor);
+                    }
+                    else
+                        contributor = contributors.get((String) contributorObject.get("fullName"));
                 }
-                else
-                    contributor = contributors.get((String) contributorObject.get("fullName"));
+                else{
+                    if(!contributors.containsKey((String) contributorObject.get("fullName")))
+                        contributors.put(contributor.getFullName(), contributor);
+                }
 
                 ContributorProduction contributorProduction = new ContributorProduction();
                 contributorProduction.setProduction(movie);
                 contributorProduction.setContributor(contributor);
                 contributorProduction.setRole(Role.roleCompare((String)contributorObject.get("role")));
 
-
-                contributors.get(contributor.getFullName()).addContribution(contributorProduction);
                 movies.get(movie.getTitle()).addContribution(contributorProduction);
+                contributors.get(contributor.getFullName()).addContribution(contributorProduction);
             }
         }
         movieService.createAll(new ArrayList<Movie>(movies.values()));
+        logger.info("Inserted initial movies to database successfully.");
         contributorService.createAll(new ArrayList<Contributor>(contributors.values()));
+        logger.info("Inserted contributors of initial movies to database successfully.");
 
     }
 

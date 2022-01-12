@@ -2,8 +2,6 @@ package com.pfseven.smdb.domain;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
 
 @Data

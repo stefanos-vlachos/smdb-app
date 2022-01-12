@@ -1,0 +1,284 @@
+Movie ID,Title,Contributor ID,Contributor Name,Role
+1,Schindler's List,1,Steven Zaillian,WRITER
+1,Schindler's List,29,Ralph Fiennes,ACTOR
+1,Schindler's List,30,Ben Kingsley,ACTOR
+1,Schindler's List,17,John Williams,MUSICIAN
+1,Schindler's List,31,Gerald R. Molen,PRODUCER
+1,Schindler's List,32,Steven Spielberg,PRODUCER
+1,Schindler's List,33,Thomas Keneally,WRITER
+1,Schindler's List,34,Branko Lustig,PRODUCER
+1,Schindler's List,35,Caroline Goodall,ACTOR
+1,Schindler's List,36,Liam Neeson,ACTOR
+1,Schindler's List,32,Steven Spielberg,DIRECTOR
+2,The Irishman,2,Harvey Keitel,ACTOR
+2,The Irishman,3,Randall Emmett,PRODUCER
+2,The Irishman,4,Charles Brandt,WRITER
+2,The Irishman,5,Gerald Chamales,PRODUCER
+2,The Irishman,6,Martin Scorsese,DIRECTOR
+2,The Irishman,7,Robert De Niro,PRODUCER
+2,The Irishman,7,Robert De Niro,ACTOR
+2,The Irishman,8,Joe Pesci,ACTOR
+2,The Irishman,1,Steven Zaillian,WRITER
+2,The Irishman,18,Robbie Robertson,MUSICIAN
+2,The Irishman,19,Al Pacino,ACTOR
+2,The Irishman,28,Gabriele Israilovici,PRODUCER
+3,Home Alone,9,John Hughes,WRITER
+3,Home Alone,8,Joe Pesci,ACTOR
+3,Home Alone,10,Macaulay Culkin,ACTOR
+3,Home Alone,11,John Heard,ACTOR
+3,Home Alone,12,Tarquin Gotch,PRODUCER
+3,Home Alone,13,Chris Columbus,DIRECTOR
+3,Home Alone,9,John Hughes,PRODUCER
+3,Home Alone,14,Mark Levinson,PRODUCER
+3,Home Alone,15,Scott M. Rosenfelt,PRODUCER
+3,Home Alone,16,Daniel Stern,ACTOR
+3,Home Alone,17,John Williams,MUSICIAN
+4,The Godfather,20,Nino Rota,MUSICIAN
+4,The Godfather,21,Francis Ford Coppola,DIRECTOR
+4,The Godfather,22,Gray Frederickson,PRODUCER
+4,The Godfather,23,Marlon Brando,ACTOR
+4,The Godfather,19,Al Pacino,ACTOR
+4,The Godfather,21,Francis Ford Coppola,WRITER
+4,The Godfather,24,Albert S. Ruddy,PRODUCER
+4,The Godfather,25,Mario Puzo,WRITER
+4,The Godfather,26,James Caan,ACTOR
+4,The Godfather,27,Richard S. Castellano,ACTOR
+5,Love Actually,36,Liam Neeson,ACTOR
+5,Love Actually,37,Colin Firth,ACTOR
+5,Love Actually,38,Eric Fellner,PRODUCER
+5,Love Actually,39,Richard Curtis,DIRECTOR
+5,Love Actually,40,Craig Armstrong,MUSICIAN
+5,Love Actually,41,Tim Bevan,PRODUCER
+5,Love Actually,42,Martine McCutcheon,ACTOR
+5,Love Actually,39,Richard Curtis,WRITER
+5,Love Actually,43,Hugh Grant,ACTOR
+5,Love Actually,44,Duncan Kenworthy,PRODUCER
+6,Never Rarely Sometimes Always,45,Eliza Hittman,WRITER
+6,Never Rarely Sometimes Always,46,Adele Romanski,PRODUCER
+6,Never Rarely Sometimes Always,47,Talia Ryder,ACTOR
+6,Never Rarely Sometimes Always,45,Eliza Hittman,DIRECTOR
+6,Never Rarely Sometimes Always,48,Eliazar Jimenez,ACTOR
+6,Never Rarely Sometimes Always,49,Sara Murphy,PRODUCER
+6,Never Rarely Sometimes Always,50,Sidney Flanigan,ACTOR
+6,Never Rarely Sometimes Always,51,Theodore Pellerin,ACTOR
+6,Never Rarely Sometimes Always,52,Julia Holter,MUSICIAN
+7,The Shawshank Redemption,53,Stephen King,WRITER
+7,The Shawshank Redemption,54,Tim Robbins,ACTOR
+7,The Shawshank Redemption,55,William Sadler,ACTOR
+7,The Shawshank Redemption,56,Morgan Freeman,ACTOR
+7,The Shawshank Redemption,57,Niki Marvin,PRODUCER
+7,The Shawshank Redemption,58,Frank Darabont,WRITER
+7,The Shawshank Redemption,59,David V. Lester,PRODUCER
+7,The Shawshank Redemption,60,Thomas Newman,MUSICIAN
+7,The Shawshank Redemption,58,Frank Darabont,DIRECTOR
+7,The Shawshank Redemption,61,Bob Gunton,ACTOR
+7,The Shawshank Redemption,62,Liz Glotzer,PRODUCER
+8,The Dark Knight,63,Bob Kane,WRITER
+8,The Dark Knight,64,Michael Caine,ACTOR
+8,The Dark Knight,65,Heath Ledger,ACTOR
+8,The Dark Knight,66,Jonathan Nolan,WRITER
+8,The Dark Knight,67,Christopher Nolan,PRODUCER
+8,The Dark Knight,83,David S. Goyer,WRITER
+8,The Dark Knight,84,Aaron Eckhart,ACTOR
+8,The Dark Knight,67,Christopher Nolan,WRITER
+8,The Dark Knight,69,Hans Zimmer,MUSICIAN
+8,The Dark Knight,85,Charles Roven,PRODUCER
+8,The Dark Knight,86,Emma Thomas,PRODUCER
+8,The Dark Knight,87,Christian Bale,ACTOR
+8,The Dark Knight,67,Christopher Nolan,DIRECTOR
+8,The Dark Knight,88,James Newton Howard,MUSICIAN
+9,Inception,67,Christopher Nolan,WRITER
+9,Inception,68,John Bernard,PRODUCER
+9,Inception,69,Hans Zimmer,MUSICIAN
+9,Inception,67,Christopher Nolan,PRODUCER
+9,Inception,70,Leonardo DiCaprio,ACTOR
+9,Inception,79,Tom Hardy,ACTOR
+9,Inception,80,Joseph Gordon-Levitt,ACTOR
+9,Inception,81,Zakaria Alaoui,PRODUCER
+9,Inception,67,Christopher Nolan,DIRECTOR
+9,Inception,82,Elliot Page,ACTOR
+10,Don't Look Up,71,Kevin J. Messick,PRODUCER
+10,Don't Look Up,72,Jennifer Lawrence,ACTOR
+10,Don't Look Up,73,Meryl Streep,ACTOR
+10,Don't Look Up,70,Leonardo DiCaprio,ACTOR
+10,Don't Look Up,74,Erin Charles,PRODUCER
+10,Don't Look Up,75,Adam McKay,PRODUCER
+10,Don't Look Up,76,Nicholas Britell,MUSICIAN
+10,Don't Look Up,77,David Sirota,WRITER
+10,Don't Look Up,78,Cate Blanchett,ACTOR
+10,Don't Look Up,75,Adam McKay,WRITER
+10,Don't Look Up,75,Adam McKay,DIRECTOR
+11,12 Angry Men,89,Reginald Rose,PRODUCER
+11,12 Angry Men,90,Henry Fonda,PRODUCER
+11,12 Angry Men,91,Lee J. Cobb,ACTOR
+11,12 Angry Men,89,Reginald Rose,WRITER
+11,12 Angry Men,92,Sidney Lumet,DIRECTOR
+11,12 Angry Men,93,Kenyon Hopkins,MUSICIAN
+11,12 Angry Men,90,Henry Fonda,ACTOR
+11,12 Angry Men,94,Martin Balsam,ACTOR
+11,12 Angry Men,95,E.G. Marshall,ACTOR
+11,12 Angry Men,96,George Justin,PRODUCER
+12,Nomadland,97,Mollye Asher,PRODUCER
+12,Nomadland,98,Frances McDormand,PRODUCER
+12,Nomadland,99,Gay DeForest,ACTOR
+12,Nomadland,98,Frances McDormand,ACTOR
+12,Nomadland,100,Dan Janvey,PRODUCER
+12,Nomadland,101,Chloe Zhao,DIRECTOR
+12,Nomadland,102,Linda May,ACTOR
+12,Nomadland,103,Jessica Bruder,WRITER
+12,Nomadland,104,Ludovico Einaudi,MUSICIAN
+12,Nomadland,101,Chloe Zhao,WRITER
+12,Nomadland,105,Peter Spears,PRODUCER
+12,Nomadland,106,David Strathairn,ACTOR
+13,Kill Bill Volume 1,107,Daryl Hannah,ACTOR
+13,Kill Bill Volume 1,108,Quentin Tarantino,DIRECTOR
+13,Kill Bill Volume 1,116,Lawrence Bender,PRODUCER
+13,Kill Bill Volume 1,117,Uma Thurman,ACTOR
+13,Kill Bill Volume 1,118,Lucy Liu,ACTOR
+13,Kill Bill Volume 1,108,Quentin Tarantino,WRITER
+13,Kill Bill Volume 1,117,Uma Thurman,WRITER
+13,Kill Bill Volume 1,119,Mitsuhisa Ishikawa,PRODUCER
+13,Kill Bill Volume 1,120,RZA,MUSICIAN
+13,Kill Bill Volume 1,121,David Carradine,ACTOR
+13,Kill Bill Volume 1,122,Erica Steinberg,PRODUCER
+13,Kill Bill Volume 1,123,E. Bennett Walsh,PRODUCER
+14,Pulp Fiction,108,Quentin Tarantino,WRITER
+14,Pulp Fiction,109,Samuel L. Jackson,ACTOR
+14,Pulp Fiction,110,Danny DeVito,PRODUCER
+14,Pulp Fiction,111,Stacey Sher,PRODUCER
+14,Pulp Fiction,112,Roger Avary,WRITER
+14,Pulp Fiction,113,John Travolta,ACTOR
+14,Pulp Fiction,114,Michael Shamberg,PRODUCER
+14,Pulp Fiction,115,Tim Roth,ACTOR
+14,Pulp Fiction,108,Quentin Tarantino,DIRECTOR
+14,Pulp Fiction,116,Lawrence Bender,PRODUCER
+14,Pulp Fiction,117,Uma Thurman,ACTOR
+15,The Power of the Dog,124,Jane Campion,PRODUCER
+15,The Power of the Dog,125,Iain Canning,PRODUCER
+15,The Power of the Dog,126,Jesse Plemons,ACTOR
+15,The Power of the Dog,127,Roger Frappier,PRODUCER
+15,The Power of the Dog,128,Kirsten Dunst,ACTOR
+15,The Power of the Dog,129,Emile Sherman,PRODUCER
+15,The Power of the Dog,130,Benedict Cumberbatch,ACTOR
+15,The Power of the Dog,124,Jane Campion,DIRECTOR
+15,The Power of the Dog,143,Kodi Smit-McPhee,ACTOR
+15,The Power of the Dog,124,Jane Campion,WRITER
+15,The Power of the Dog,144,Jonny Greenwood,MUSICIAN
+16,Spider-Man: No Way Home,131,Chris McKenna,WRITER
+16,Spider-Man: No Way Home,132,Stan Lee,WRITER
+16,Spider-Man: No Way Home,133,Victoria Alonso,PRODUCER
+16,Spider-Man: No Way Home,134,Michael Giacchino,MUSICIAN
+16,Spider-Man: No Way Home,135,Avi Arad,PRODUCER
+16,Spider-Man: No Way Home,136,Erik Sommers,WRITER
+16,Spider-Man: No Way Home,137,Mitchell Bell,PRODUCER
+16,Spider-Man: No Way Home,130,Benedict Cumberbatch,ACTOR
+16,Spider-Man: No Way Home,138,Jon Watts,DIRECTOR
+16,Spider-Man: No Way Home,139,Louis D'Esposito,PRODUCER
+16,Spider-Man: No Way Home,140,Tom Holland,ACTOR
+16,Spider-Man: No Way Home,141,Zendaya,ACTOR
+16,Spider-Man: No Way Home,142,Jacob Batalon,ACTOR
+17,Licorice Pizza,145,Jason Cloth,PRODUCER
+17,Licorice Pizza,146,Alana Haim,ACTOR
+17,Licorice Pizza,147,Paul Thomas Anderson,WRITER
+17,Licorice Pizza,147,Paul Thomas Anderson,PRODUCER
+17,Licorice Pizza,148,Will Angarola,ACTOR
+17,Licorice Pizza,149,Sean Penn,ACTOR
+17,Licorice Pizza,147,Paul Thomas Anderson,DIRECTOR
+17,Licorice Pizza,144,Jonny Greenwood,MUSICIAN
+17,Licorice Pizza,150,Daniel Lupi,PRODUCER
+17,Licorice Pizza,151,Cooper Hoffman,ACTOR
+17,Licorice Pizza,152,Aaron L. Gilbert,PRODUCER
+18,Fight Club,153,Ross Grayson Bell,PRODUCER
+18,Fight Club,154,John King,MUSICIAN
+18,Fight Club,155,Jim Uhls,WRITER
+18,Fight Club,156,Chuck Palahniuk,WRITER
+18,Fight Club,157,Cean Chaffin,PRODUCER
+18,Fight Club,158,Brad Pitt,ACTOR
+18,Fight Club,159,David Fincher,DIRECTOR
+18,Fight Club,160,Zach Grenier,ACTOR
+18,Fight Club,161,Michael Simpson,MUSICIAN
+18,Fight Club,162,Edward Norton,ACTOR
+18,Fight Club,163,Art Linson,PRODUCER
+18,Fight Club,164,Meat Loaf,ACTOR
+19,First Cow,165,Ryan Findley,ACTOR
+19,First Cow,166,Kelly Reichardt,WRITER
+19,First Cow,167,Dylan Smith,ACTOR
+19,First Cow,168,Neil Kopp,PRODUCER
+19,First Cow,169,Alia Shawkat,ACTOR
+19,First Cow,166,Kelly Reichardt,DIRECTOR
+19,First Cow,170,Jonathan Raymond,WRITER
+19,First Cow,171,Anish Savjani,PRODUCER
+19,First Cow,172,John Magaro,ACTOR
+19,First Cow,173,William Tyler,MUSICIAN
+19,First Cow,174,Vincent Savino,PRODUCER
+20,Drive my car,175,Haruki Murakami,WRITER
+20,Drive my car,176,Hidetoshi Nishijima,ACTOR
+20,Drive my car,177,Yoo-rim Park,ACTOR
+20,Drive my car,178,Takamasa Oe,WRITER
+20,Drive my car,179,Tsuyoshi Goro,PRODUCER
+20,Drive my car,180,Misaki Kawamura,PRODUCER
+20,Drive my car,181,Ryusuke Hamaguchi,DIRECTOR
+20,Drive my car,181,Ryusuke Hamaguchi,WRITER
+20,Drive my car,182,Toko Miura,ACTOR
+20,Drive my car,183,Reika Kirishima,ACTOR
+20,Drive my car,184,Osamu Kubota,PRODUCER
+20,Drive my car,185,Sachio Matsushita,PRODUCER
+20,Drive my car,186,Eiko Ishibashi,MUSICIAN
+21,The Matrix,187,Barrie M. Osborne,PRODUCER
+21,The Matrix,198,Bruce Berman,PRODUCER
+21,The Matrix,199,Keanu Reeves,ACTOR
+21,The Matrix,200,Andrew Mason,PRODUCER
+21,The Matrix,201,Laurence Fishburne,ACTOR
+21,The Matrix,202,Lilly Wachowski,DIRECTOR
+21,The Matrix,203,Joel Silver,PRODUCER
+21,The Matrix,204,Don Davis,MUSICIAN
+21,The Matrix,205,Yahya Abdul-Mateen II,ACTOR
+21,The Matrix,202,Lilly Wachowski,WRITER
+21,The Matrix,206,Lana Wachowski,WRITER
+21,The Matrix,207,Carrie-Anne Moss,ACTOR
+21,The Matrix,206,Lana Wachowski,DIRECTOR
+22,The Lord of the Rings: The Fellowship of the Ring,188,Ian McKellen,ACTOR
+22,The Lord of the Rings: The Fellowship of the Ring,189,Fran Walsh,PRODUCER
+22,The Lord of the Rings: The Fellowship of the Ring,190,Orlando Bloom,ACTOR
+22,The Lord of the Rings: The Fellowship of the Ring,191,J.R.R. Tolkien,WRITER
+22,The Lord of the Rings: The Fellowship of the Ring,192,Elijah Wood,ACTOR
+22,The Lord of the Rings: The Fellowship of the Ring,193,Howard Shore,MUSICIAN
+22,The Lord of the Rings: The Fellowship of the Ring,194,Sala Baker,ACTOR
+22,The Lord of the Rings: The Fellowship of the Ring,195,Philippa Boyens,WRITER
+22,The Lord of the Rings: The Fellowship of the Ring,196,Peter Jackson,DIRECTOR
+22,The Lord of the Rings: The Fellowship of the Ring,197,Tim Sanders,PRODUCER
+22,The Lord of the Rings: The Fellowship of the Ring,189,Fran Walsh,WRITER
+22,The Lord of the Rings: The Fellowship of the Ring,187,Barrie M. Osborne,PRODUCER
+22,The Lord of the Rings: The Fellowship of the Ring,196,Peter Jackson,PRODUCER
+23,Parasite,208,Jaeil Jung,MUSICIAN
+23,Parasite,209,Yeo-jeong Cho,ACTOR
+23,Parasite,210,Woo-sik Choi,ACTOR
+23,Parasite,211,Bong Joon Ho,PRODUCER
+23,Parasite,212,Sin-ae Kwak,PRODUCER
+23,Parasite,211,Bong Joon Ho,DIRECTOR
+23,Parasite,213,Moon Yang Kwon,PRODUCER
+23,Parasite,214,Jin-won Han,WRITER
+23,Parasite,215,Kang-ho Song,ACTOR
+23,Parasite,211,Bong Joon Ho,WRITER
+23,Parasite,216,Sun-kyun Lee,ACTOR
+24,The Worst Person in the World,217,Anders Danielsen Lie,ACTOR
+24,The Worst Person in the World,218,Andrea Berentsen Ottmar,PRODUCER
+24,The Worst Person in the World,219,Joachim Trier,WRITER
+24,The Worst Person in the World,219,Joachim Trier,DIRECTOR
+24,The Worst Person in the World,220,Tom Kjeseth,PRODUCER
+24,The Worst Person in the World,221,Maria Grazia Di Meo,ACTOR
+24,The Worst Person in the World,222,Dyveke Bjorkly Graver,PRODUCER
+24,The Worst Person in the World,223,Thomas Robsahm,PRODUCER
+24,The Worst Person in the World,224,Eskil Vogt,WRITER
+24,The Worst Person in the World,225,Renate Reinsve,ACTOR
+24,The Worst Person in the World,226,Mia McGovern Zaini,ACTOR
+24,The Worst Person in the World,227,Ola Flottum,MUSICIAN
+25,Portrait of a Lady on Fire.,228,Adele Haenel,ACTOR
+25,Portrait of a Lady on Fire.,229,Valeria Golino,ACTOR
+25,Portrait of a Lady on Fire.,230,Noemie Merlant,ACTOR
+25,Portrait of a Lady on Fire.,231,Jean-Baptiste de Laubier,MUSICIAN
+25,Portrait of a Lady on Fire.,232,Benedicte Couvreur,PRODUCER
+25,Portrait of a Lady on Fire.,233,Luana Bajrami,ACTOR
+25,Portrait of a Lady on Fire.,234,Arthur Simonini,MUSICIAN
+25,Portrait of a Lady on Fire.,235,Celine Sciamma,WRITER
+25,Portrait of a Lady on Fire.,235,Celine Sciamma,DIRECTOR
