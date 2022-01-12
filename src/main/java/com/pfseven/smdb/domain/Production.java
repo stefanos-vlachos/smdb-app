@@ -1,16 +1,11 @@
 package com.pfseven.smdb.domain;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 

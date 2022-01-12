@@ -15,10 +15,6 @@ public interface ContributorRepository extends JpaRepository<Contributor, Long> 
     @Query("select c from Contributor c join fetch c.contributorProductions where c.fullName = ?1")
     Contributor findContributorByFullName(String fullName);
 
-    Boolean existsContributorByFullName(String fullName);
-
-    Boolean existsByFullName(Contributor contributor);
-
     @Query("select c from Contributor c join fetch c.contributorProductions where c.id = ?1")
     Contributor findLazy(Long id);
 

@@ -97,7 +97,7 @@ public class SitcomServiceImpl extends BaseServiceImpl<Sitcom> implements Sitcom
         List<Sitcom> sitcoms = findAll();
 
         try (CSVPrinter sitcomsCsvPrinter = new CSVPrinter(sitcomsWriter, CSVFormat.DEFAULT);
-             CSVPrinter contributionsCsvPrinter = new CSVPrinter(contributionsWriter, CSVFormat.DEFAULT);){
+             CSVPrinter contributionsCsvPrinter = new CSVPrinter(contributionsWriter, CSVFormat.DEFAULT)){
 
             sitcomsCsvPrinter.printRecord("Sitcom ID", "Title", "Genres", "Language", "Rating", "Release Year",  "Seasons", "Episodes", "Resume");
             contributionsCsvPrinter.printRecord("Sitcom ID", "Title", "Contributor ID", "Contributor Name", "Role");

@@ -38,16 +38,6 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
     }
 
     @Override
-    public Boolean existsByName(Contributor contributor) {
-        if(contributorRepository.existsContributorByFullName(contributor.getFullName())){
-            logger.info("Contributor {} exists in database.", contributor.getFullName());
-            return true;
-        }
-        logger.info("Contributor {} does not exist in database.", contributor.getFullName());
-        return false;
-    }
-
-    @Override
     public Contributor find(Long id) {
         return findLazy(id);
     }
@@ -134,7 +124,7 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
         List<Contributor> contributors = findAll();
 
         try (CSVPrinter contributorsCsvPrinter = new CSVPrinter(contributorsWriter, CSVFormat.DEFAULT);
-             CSVPrinter contributionsCsvPrinter2 = new CSVPrinter(contributionsWriter, CSVFormat.DEFAULT);){
+             CSVPrinter contributionsCsvPrinter2 = new CSVPrinter(contributionsWriter, CSVFormat.DEFAULT)){
 
             contributorsCsvPrinter.printRecord("Contributor ID", "Full Name", "Origin", "Gender");
             contributionsCsvPrinter2.printRecord("Contributor ID", "Contributor Name", "Production ID", "Production Title", "Role");
@@ -154,7 +144,7 @@ public class ContributorServiceImpl extends BaseServiceImpl<Contributor> impleme
 
     @Override
     public Map<Genre, List<Production>> findContentOfContributorByGenre(Long id) {
-        Map<Genre, List<Production>> output = new HashMap<Genre, List<Production>>();
+        Map<Genre, List<Production>> output = new HashMap<>();
         List<Production> prods = contributorRepository.findContentOfConributor(id);
         for(Production p: prods){
             for(Genre g: p.getGenres()){

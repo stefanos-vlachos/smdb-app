@@ -10,8 +10,6 @@ public interface ContributorService extends BaseService<Contributor, Long> {
 
     Contributor findContributorByFullName(String fullName);
 
-    Boolean existsByName(Contributor contributor);
-
     Contributor findLazy(Long id);
 
     List<Contributor> findAllLazy();
