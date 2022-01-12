@@ -63,7 +63,7 @@ public class ContributorController extends AbstractController<Contributor>{
         return ResponseEntity.ok(ApiResponse.<List<Sitcom>>builder().data(contributorService.findSitcomsOfContributorByRole(id, Role.roleCompare(role))).build());
     }
 
-    @GetMapping(headers = "action=getContent", params = {"id, role"})
+    @GetMapping(headers = "action=getContent", params = {"id", "role"})
     public ResponseEntity<ApiResponse<List<Production>>> findContentOfContributorByRole(@RequestParam("id") Long id, @RequestParam("role") String role) {
         return ResponseEntity.ok(ApiResponse.<List<Production>>builder().data(contributorService.findContentOfContributorByRole(id, Role.roleCompare(role))).build());
     }
